@@ -1,0 +1,337 @@
+ /**
+ * Crypto Global Styles
+ */
+ @import 'icons';
+ @import 'badge';
+ @import 'widgets';
+ @import 'map';
+ @import 'pace';
+ @import 'wallet';
+ @import 'marquee';
+ @import 'transactions';
+ @import 'price-list';
+ @import 'coin';
+ @import 'profile';
+ @import 'login';
+
+ /**
+  * Crypto MDC modifications
+  */
+ @import 'mdc/card';
+ @import 'mdc/table';
+ @import 'mdc/list';
+ @import 'mdc/toolbar';
+ @import 'mdc/text-field';
+
+ @import 'layouts/partials/sidemenu';
+
+ /**
+  * Crypto Layouts
+  */
+ @import 'layouts/classic';
+ @import 'layouts/no-layout';
+
+  /**
+  * Crypto Elements Demo
+  */
+  @import 'demo';
+
+ /**
+  * Crypto Switcher
+  */
+  @import 'layouts/partials/switcher';
+
+
+/**
+  * Basic Styling
+  */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-kerning: auto;
+  font-kerning: auto;
+}
+
+a {
+  text-decoration: none;
+  color: $mdc-theme-primary;
+}
+
+.crypto-list {
+  list-style-type: none;
+  padding: 0;
+  li {
+    text-indent: 24px;
+    margin-bottom: 12px;
+    &:before {
+      content: "\E876   ";
+      font-family: "Material Icons";
+      position: relative;
+      font-size: 12px;
+      line-height: 21px;
+      color: $mdc-theme-secondary;
+      left: -12px;
+      @include mdc-rtl {
+        left: auto;
+        right: -12px;
+      }
+    }
+  }
+  &.crypto-list--columns-2 {
+    column-count: 2;
+  }
+}
+// All content wrapped.
+.crypto-wrapper {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  @include mdc-layout-grid-media-query_(phone) {
+    flex-direction: column;
+  }
+
+  &__sidenav {
+    z-index: 6;
+    .mdc-drawer, .mdc-drawer.mdc-drawer--open {
+      height: 100%;
+    }
+    .mdc-drawer--closed {
+      box-shadow: none;
+    }
+  }
+}
+
+// Fullheight grid
+.mdc-layout-grid--fullheight {
+  height: 100%;
+  width: 100%;
+  > .mdc-layout-grid__inner {
+    height: 100%;
+    align-items: center;
+  }
+}
+
+// Main section next to sidebar.
+.crypto-main {
+  flex: 1 1 100%;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  &__content {
+    flex: 1 1 100%;
+    overflow-y: auto;
+    position: relative;
+    padding-top: 36px;
+    @include mdc-layout-grid-media-query_(phone) {
+      padding-top: 0px;
+    }
+  }
+}
+
+// Hide scrollbars class
+.crypto-hide-scrollbars {
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+// Tabs
+.mdc-tab-bar__indicator {
+  @include mdc-theme-prop(background-color, primary);
+}
+.crypto-tab-panel.crypto-tab-panel--active {
+  display: block;
+}
+.crypto-tab-panel {
+  display: none;
+}
+
+// Bordered list
+.crypto-border-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.crypto-border-list__item {
+  padding: 16px;
+  position: relative;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 2px;
+  overflow: hidden;
+  background: rgba($mdc-theme-background, .2);
+  @include mdc-elevation(4, $mdc-theme-background);
+  transition: all .3s;
+  &--active, &:hover {
+    background: lighten($mdc-theme-background, 5%);
+    @include mdc-elevation(16, $mdc-theme-background);
+  }
+  &--dense {
+    padding: 0 0 0 16px;
+    @include mdc-rtl {
+      padding: 0 16px 0 0px;
+    }
+  }
+  &--large {
+    padding: 24px;
+  }
+}
+.crypto-border-list__border,
+.crypto-border-list__border-hover {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  transition: all .3s;
+  @include mdc-rtl {
+    left: auto;
+    right: 0;
+  }
+  .crypto-border-list__item:hover &,
+  .crypto-border-list__item--active & {
+    top: 0;
+  }
+}
+.crypto-border-list__border-hover {
+  top: 100%;
+}
+
+.crypto-border-list__text,
+.crypto-border-list__action {
+  opacity: .45;
+  transition: all .3s;
+  .crypto-border-list__item:hover &,
+  .crypto-border-list__item--active & {
+    opacity: 1;
+  }
+  @include mdc-rtl {
+    .material-icons {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+// Basic typography
+p {
+  margin: 0 0 12px;
+  line-height: 24px;
+}
+h1 {
+  line-height: 32px;
+}
+.crypto-font-weight-light {
+  font-weight: lighter !important;
+}
+.crypto-text-align-center {
+  text-align: center;
+}
+.crypto-font-size-big {
+  font-size: 1.75em;
+}
+.crypto-font-size-small {
+  font-size: 0.75em;
+}
+.crypto-text-center {
+  text-align: center;
+}
+.crypto-text-light {
+  font-weight: lighter;
+}
+.crypto-text-bold {
+  font-weight: bolder;
+}
+.crypto-text-medium {
+  font-weight: 500;
+}
+.crypto-text-normal {
+  font-weight: normal;
+}
+
+// Margin Control
+.crypto-margin-top-none {
+  margin-top: 0;
+}
+.crypto-margin-bottom-none {
+  margin-bottom: 0;
+}
+.crypto-margin-bottom-small {
+  margin-bottom: 8px;
+}
+.crypto-margin-bottom-normal {
+  margin-bottom: 16px;
+}
+.crypto-margin-bottom-big {
+  margin-bottom: 24px;
+}
+.crypto-margin-right-big {
+  margin-right: 24px;
+}
+.crypto-margin-none {
+  margin: 0;
+}
+
+// Width control
+.crypto-w-100 {
+  width: 100%;
+}
+
+// Flex Classes
+.crypto-display-flex {
+  display: flex;
+  align-items: center;
+  &--column {
+    flex-direction: column;
+  }
+  &__flexed {
+    flex: 1 1 100%;
+  }
+  &--end {
+    align-items: flex-end;
+  }
+  &--start {
+    align-items: flex-start;
+  }
+  &--space-between {
+    justify-content: space-between;
+  }
+}
+
+// Visibility Classes
+@each $size in map-keys($mdc-layout-grid-columns) {
+  .crypto-hide-#{$size} {
+    @include mdc-layout-grid-media-query_($size) {
+      display: none;
+    }
+  }
+}
+
+.crypto-overflow-x-auto {
+  overflow-x: auto;
+}
+
+// Chart tool tip
+.apexcharts-tooltip.light {
+  background-color: $mdc-theme-primary !important;
+}
+
+// Snackbar
+.mdc-snackbar__text {
+  color: $mdc-theme-primary;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 0;
+}
+.mdc-snackbar__action-wrapper {
+  padding-left: 0;
+}

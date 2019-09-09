@@ -1,0 +1,132 @@
+/**
+    Cryptum - Luxurious Cryptocurrency Material Design Admin Dashboard
+    --------------------------------------------------------------------------
+    Light/Purple-Red skin
+**/
+
+
+/******************
+[Table of contents]
+
+1. Cryptum Root Variables
+2. Cryptum Skin Classes
+3. Font Awesome Icons
+4. Google's Material Web Components
+5. Cryptum Components
+*******************/
+
+// Typography
+$mdc-typography-font-family: 'Roboto Condensed', sans-serif;
+$mdc-typography-styles-headline1: (
+  font-family: "Playfair Display"
+);
+$mdc-typography-styles-headline2: (
+  font-family: "Playfair Display"
+);
+$mdc-typography-styles-headline3: (
+  font-family: "Playfair Display"
+);
+
+// Material Design Variables
+$mdc-theme-primary: #77216F;
+$mdc-theme-secondary: #FF8F68;
+$mdc-theme-background: #fff;
+$mdc-theme-surface: #f9f6f8;
+$mdc-theme-on-surface: rgba(0,0,0,.65);
+$mdc-snackbar-background-color: #ffecfd;
+$mdc-layout-grid-default-gutter: (
+  desktop: 48px,
+  tablet: 32px,
+  phone: 16px
+);
+$mdc-layout-grid-breakpoints: (
+  desktop: 1280px,
+  tablet: 480px,
+  phone: 0px
+);
+
+// Additional Material Design colors
+$mdc-theme-primary-200: #ca90bb;
+$mdc-theme-primary-600: #862776;
+$mdc-theme-primary-800: #4e1556;
+$mdc-theme-secondary-500: #ff5f25;
+$mdc-theme-secondary-700: #e7521c;
+
+// Crypto Variables
+$crypto-nav-width: 160px;
+$crypto-text-low-opacity: 0.65;
+$crypto-text-high-opacity: 0.85;
+
+// Contextual colors
+$crypto-success: #539a0a;
+$crypto-danger: #d23f0b;
+$crypto-info: #0baad2;
+
+/*------------------------------------------------------------------
+[1. Cryptum Root Variables]
+------------------------------------------------------------------*/
+:root {
+  --mdc-theme-primary-200: #ca90bb;
+  --mdc-theme-primary-600: #862776;
+  --mdc-theme-primary-800: #4e1556;
+  --mdc-theme-secondary-500: #ff5f25;
+  --mdc-theme-secondary-700: #e7521c;
+}
+
+/*------------------------------------------------------------------
+[2. Cryptum Skin Classes]
+------------------------------------------------------------------*/
+// Gradients & Shadows
+.crypro-theme-gradient {
+  background-image: linear-gradient(134deg, rgba(255,255,255,0.2) 0%, rgba(0,0,0,0.05) 100%);
+  [dir=rtl] & {
+    background-image: linear-gradient(-134deg, rgba(255,255,255,0.2) 0%, rgba(0,0,0,0.05) 100%);
+  }
+}
+.crypto-text-shadow {
+  text-shadow: 3px 6px 1px rgba(119,33,111,0.05), 0 0 5px rgba(119,33,111,0.05), 1px 1px 3px rgba(119,33,111,.075), 3px 3px 5px rgba(119,33,111,.05), 5px 5px 10px rgba(119,33,111,.075), 8px 10px 10px rgba(119,33,111,.075), 20px 20px 20px rgba(119,33,111,.1);
+}
+.crypto-marquee {
+  box-shadow: inset 0px -6px 12px 0 rgba(0,0,0,0.04) !important;
+}
+// Additional Colors
+.mdc-theme--primary-200-bg {
+  background: var(--mdc-theme-primary-200);
+}
+.mdc-theme--primary-600-bg {
+  background: var(--mdc-theme-primary-600);
+}
+.mdc-theme--primary-800-bg {
+  background: var(--mdc-theme-primary-800);
+}
+.mdc-theme--secondary-700 {
+  color: var(--mdc-theme-secondary-700);
+}
+.mdc-theme--secondary-500 {
+  color: var(--mdc-theme-secondary-500);
+}
+.mdc-theme--secondary-700-bg {
+  background: var(--mdc-theme-secondary-700);
+}
+.mdc-theme--secondary-500-bg {
+  background: var(--mdc-theme-secondary-500);
+}
+
+/*------------------------------------------------------------------
+[3. Font Awesome Icons]
+------------------------------------------------------------------*/
+@import '@fortawesome/fontawesome-free/scss/fontawesome';
+@import '@fortawesome/fontawesome-free/scss/brands';
+@import '@fortawesome/fontawesome-free/scss/regular';
+@import '@fortawesome/fontawesome-free/scss/solid';
+@import '@fortawesome/fontawesome-free/scss/v4-shims';
+
+/*------------------------------------------------------------------
+[4. Google's Material Web Components]
+------------------------------------------------------------------*/
+@import 'material-components-web/material-components-web';
+
+/*------------------------------------------------------------------
+[5. Cryptum Components]
+------------------------------------------------------------------*/
+@import 'crypto/global';

@@ -1,0 +1,134 @@
+/**
+    Cryptum - Luxurious Cryptocurrency Material Design Admin Dashboard
+    --------------------------------------------------------------------------
+    Dark/Gold-Orange-Red skin
+**/
+
+
+/******************
+[Table of contents]
+
+1. Cryptum Root Variables
+2. Cryptum Skin Classes
+3. Font Awesome Icons
+4. Google's Material Web Components
+5. Cryptum Components
+*******************/
+
+
+// Typography
+$mdc-typography-font-family: 'Roboto Condensed', sans-serif;
+$mdc-typography-styles-headline1: (
+  font-family: "Playfair Display"
+);
+$mdc-typography-styles-headline2: (
+  font-family: "Playfair Display"
+);
+$mdc-typography-styles-headline3: (
+  font-family: "Playfair Display"
+);
+
+// Material Design Variables
+$mdc-theme-primary: #ffce61;
+$mdc-theme-secondary: #f56c2a;
+$mdc-theme-background: #313a43;
+$mdc-theme-surface: #3D444B;
+$mdc-layout-grid-default-gutter: (
+  desktop: 16px,
+  tablet: 16px,
+  phone: 16px
+);
+
+$mdc-layout-grid-breakpoints: (
+  desktop: 1280px,
+  tablet: 480px,
+  phone: 0px
+);
+
+// Additional Material Design colors
+$mdc-theme-primary-200: #FFDEA3;
+$mdc-theme-primary-600: #FDB25B;
+$mdc-theme-primary-800: #FA9351;
+$mdc-theme-secondary-500: #fdb937;
+$mdc-theme-secondary-700: #f99a32;
+
+// Crypto Variables
+$crypto-nav-width: 160px;
+$crypto-text-low-opacity: 0.45;
+$crypto-text-high-opacity: 0.75;
+
+// Contextual colors
+$crypto-success: #61FF8D;
+$crypto-danger: #FF9B9B;
+$crypto-info: #61abff;
+
+
+
+/*------------------------------------------------------------------
+[1. Cryptum Root Variables]
+------------------------------------------------------------------*/
+:root {
+  --mdc-theme-primary-200: #FFDEA3;
+  --mdc-theme-primary-600: #FDB25B;
+  --mdc-theme-primary-800: #FA9351;
+  --mdc-theme-secondary-700: #f99a32;
+  --mdc-theme-secondary-500: #fdb937;
+  
+}
+
+
+/*------------------------------------------------------------------
+[2. Cryptum Skin Classes]
+------------------------------------------------------------------*/
+// Gradients & Shadows
+.crypro-theme-gradient {
+  background-image: linear-gradient(134deg, rgba(255,255,255,0.2) 0%, rgba(0,0,0,0.3) 100%);
+  [dir=rtl] & {
+    background-image: linear-gradient(-134deg, rgba(255,255,255,0.2) 0%, rgba(0,0,0,0.3) 100%);
+  }
+}
+.crypto-text-shadow {
+  text-shadow: 3px 6px 1px rgba(0,0,0,0.05), 0 0 5px rgba(0,0,0,0.05), 1px 1px 3px rgba(0,0,0,.075), 3px 3px 5px rgba(0,0,0,.05), 5px 5px 10px rgba(0,0,0,.075), 8px 10px 10px rgba(0,0,0,.075), 20px 20px 20px rgba(0,0,0,.1);
+}
+// Additional Colors
+.mdc-theme--primary-200-bg {
+  background: var(--mdc-theme-primary-200);
+}
+.mdc-theme--primary-600-bg {
+  background: var(--mdc-theme-primary-600);
+}
+.mdc-theme--primary-800-bg {
+  background: var(--mdc-theme-primary-800);
+}
+.mdc-theme--secondary-700 {
+  color: var(--mdc-theme-secondary-700);
+}
+.mdc-theme--secondary-500 {
+  color: var(--mdc-theme-secondary-500);
+}
+.mdc-theme--secondary-700-bg {
+  background: var(--mdc-theme-secondary-700);
+}
+.mdc-theme--secondary-500-bg {
+  background: var(--mdc-theme-secondary-500);
+}
+
+/*------------------------------------------------------------------
+[3. Font Awesome Icons]
+------------------------------------------------------------------*/
+@import '@fortawesome/fontawesome-free/scss/fontawesome';
+@import '@fortawesome/fontawesome-free/scss/brands';
+@import '@fortawesome/fontawesome-free/scss/regular';
+@import '@fortawesome/fontawesome-free/scss/solid';
+@import '@fortawesome/fontawesome-free/scss/v4-shims';
+
+/*------------------------------------------------------------------
+[4. Google's Material Web Components]
+------------------------------------------------------------------*/
+@import 'material-components-web/material-components-web';
+
+
+/*------------------------------------------------------------------
+[5. Cryptum Components]
+------------------------------------------------------------------*/
+@import 'crypto/global';

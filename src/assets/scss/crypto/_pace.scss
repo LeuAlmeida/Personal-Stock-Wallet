@@ -1,0 +1,93 @@
+// Pace Basic Styles
+.pace-on {
+  opacity: 0;
+  &.pace-running, &.pace-done {
+    opacity: 1;
+  }
+}
+
+.pace {
+  position: fixed;
+  pointer-events: none;
+  user-select: none;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: opacity .75s 0s, height 0s .75s;
+  z-index: 100;
+  background: $mdc-theme-surface;
+  &.pace-inactive {
+    height: 0;
+    opacity: 0;
+  }
+}
+
+.pace-progress {
+  @include mdc-theme-prop(background, background);
+  position: fixed;
+  z-index: 101;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: translate3d(0, 0, 0) !important;
+}
+
+.pace-progress-inner {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+
+
+// Crypto Demo Logo
+.crypto-loader {
+  position: absolute;
+  top: calc(50% - 50px);
+  left: calc(50% - 50px);
+  z-index: 102;
+  .pace-done & {
+    display: none;
+  }
+}
+
+.crypto-loader, .crypto-loader:before, .crypto-loader:after {
+  position: absolute;
+  border: 3px solid transparent;
+  border-top: 3px solid $mdc-theme-primary;
+  border-radius: 50%;
+  animation: rotate linear infinite;
+  content: '';
+}
+
+.crypto-loader {
+  height: 100px;
+  width: 100px;
+  animation-duration: 1.05s;
+}
+
+.crypto-loader:before {
+  height: 75px;
+  width: 75px;
+  top: 10px;
+  left: 10px;
+  animation-duration: 10s;
+  border-top: 3px solid $mdc-theme-secondary;
+}
+
+.crypto-loader:after {
+  height: 50px;
+  width: 50px;
+  top: 22px;
+  left: 22px;
+  animation-duration: 4s;
+  border-top: 3px solid var(--mdc-theme-secondary-500);;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateZ(360deg);
+  }
+  to {
+    transform: rotateZ(0deg);
+  }
+}

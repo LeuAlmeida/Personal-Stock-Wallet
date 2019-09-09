@@ -1,0 +1,128 @@
+// Card utility classes
+.mdc-card--crypto-fullheight {
+  height: 100%;
+}
+.mdc-card--space-between {
+  justify-content: space-between;
+}
+
+.mdc-card--crypto-space-between {
+  justify-content: space-between;
+  align-content: stretch;
+  align-items: stretch;
+}
+
+// Crypto Horizontal Cards
+.crypto-card--horizontal {
+  .mdc-layout-grid {
+    padding: 0;
+  }
+  .mdc-layout-grid__inner {
+    align-items: stretch;
+    grid-gap: 16px;
+    @include mdc-layout-grid-media-query_(tablet) {
+      grid-template-columns: 1fr;
+    }
+  }
+  .crypto-card__content--column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    box-sizing: border-box;
+  }
+}
+
+.crypto-card__content--column-actions {
+  display: flex;
+  margin-top: 24px;
+  > * {
+    flex: 1 1 50%;
+  }
+  &.crypto-card__content--column-actions-vertical {
+    flex-direction: column;
+    > * {
+      margin-top: 24px;
+    }
+  }
+}
+
+// Crypto Card Title
+.crypto-card__title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 24px;
+  &.crypto-card__title--vertical {
+    flex-direction: column;
+  }
+}
+
+.crypto-card__logo {
+  max-height: 36px;
+  .crypto-card__title--vertical & {
+    max-height: none;
+  }
+}
+
+.crypto-card--headline {
+  margin: 0;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 500;
+  padding: 0 16px;
+}
+
+// Card Media
+.crypto-card__16-9-media {
+  background-image: url('http://via.placeholder.com/300x200');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 12.313rem;
+}
+.crypto-card__header {
+  padding: 16px;
+  .crypto-card--hero & {
+    padding: 48px;
+  }
+}
+.crypto-card__header--title {
+  font-size: 1.1rem;
+  line-height: 2rem;
+  letter-spacing: normal;
+  font-weight: 500;
+  margin: 0;
+}
+.crypto-card__header--subtitle {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+.crypto-card__content {
+  padding: 16px;
+  .crypto-card--hero & {
+    padding: 48px;
+  }
+  .crypto-card__header + & {
+    padding-top: 0;
+  }
+}
+/* Cards with avatar */
+.crypto-card__header--avatar {
+  flex-direction: row;
+  box-sizing: border-box;
+  display: flex;
+  max-height: 100%;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+.crypto-card__header__avatar {
+  border-radius: 50%;
+}
+.crypto-card__header__heading {
+  padding: 0 16px;
+}

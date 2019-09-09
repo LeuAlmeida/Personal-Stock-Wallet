@@ -1,0 +1,33 @@
+// Weather list modifier
+.mdc-list--crypto-weather {
+  .mdc-list-item {
+    // Weather image.
+    &__graphic {
+      width: 48px;
+      height: 48px;
+    }
+    // Temperature.
+    &__meta {
+      font-size: 32px;
+      font-weight: 300;
+    }
+  }
+}
+
+// Text overflow on list items
+.mdc-list-item__text {
+  overflow: hidden;
+}
+.mdc-list-item__secondary-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+// Schedule list modifier
+.mdc-list--crypto-schedule {
+  .mdc-list-item__secondary-text {
+    i {
+      font-size: 12px;
+      @include mdc-theme-prop(color, text-primary-on-light);
+    }
+  }
+}

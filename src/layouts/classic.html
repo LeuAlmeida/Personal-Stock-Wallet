@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Léu Almeida | Controle de Ativos</title>
+    <base href="{{ base }}">
+    <!-- load Google fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons%7CPlayfair+Display:400,400i,700%7CRoboto+Condensed:400,700" rel="stylesheet">
+    <!-- Crypto Styles -->
+    <link id="crypto-stylesheet" rel="stylesheet" href="assets/css/night-gold-orange.css">
+    <!-- page specific CSS -->
+    {% block styles %}{% endblock %}
+  </head>
+
+  <body class="mdc-typography pace-on mdc-theme--background crypro-theme-gradient">
+
+    {% include "partials/loader.html" %}
+
+    <div class="crypto-wrapper">
+
+      <div class="crypto-sidenav">
+        {% include "partials/sidemenu.html" %}
+      </div>
+
+      <main class="crypto-main">
+
+        <div class="crypto-main__content mdc-theme--text-primary-on-background">
+          {% block content %}{% endblock %}
+        </div>
+
+      </main>
+
+    </div>
+
+    {% include "partials/switcher.html" %}
+
+    <!-- initialise material components js -->
+    <script src="assets/js/material-components-web.min.js"></script>
+    <script>mdc.autoInit()</script>
+    <!-- initialise marquee js -->
+    <script src="assets/js/marquee3k.js"></script>
+    <script>Marquee3k.init()</script>
+    <!-- layout js -->
+    <script data-pace-options='{ "ajax": false, "restartOnRequestAfter": false }' src="assets/js/pace.min.js"></script>
+    <script src="assets/js/apexcharts.min.js"></script>
+    <!-- switcher js -->
+    <script src="assets/js/partials/switcher.js"></script>
+    <!-- page specific JS -->
+    {% block scripts %}{% endblock %}
+
+  </body>
+</html>

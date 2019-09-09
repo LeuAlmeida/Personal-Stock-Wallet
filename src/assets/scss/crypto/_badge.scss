@@ -1,0 +1,25 @@
+// Badge
+.crypto-badge {
+  min-width: 24px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 10px;
+  font-weight: 500;
+  display: block;
+  &--primary {
+    @include mdc-theme-prop(color, text-primary-on-dark);
+    @include mdc-theme-prop(background, primary);
+  }
+  &--secondary {
+    @include mdc-theme-prop(color, on-secondary);
+    @include mdc-theme-prop(background, secondary);
+  }
+  &--mini {
+    min-width: 16px;
+    height: 16px;
+    line-height: 16px;
+  }
+}
+

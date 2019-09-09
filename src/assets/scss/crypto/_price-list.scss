@@ -1,0 +1,49 @@
+// Price List
+.crypto-price-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.crypto-price-list__coin {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  margin-bottom: 16px;
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  padding-left: 16px;
+  @include mdc-rtl {
+    padding-left: 0;
+    padding-right: 16px;
+  }
+}
+.crypto-price-list__coin-value {
+  margin: 0;
+  grid-column: 1;
+}
+.crypto-price-list__coin-name {
+  opacity: $crypto-text-low-opacity;
+}
+.crypto-price-list__coin-performance {
+  align-self: end;
+  justify-self: end;
+  opacity: $crypto-text-low-opacity;
+  &--up {
+    color: $crypto-success;
+  }
+  &--down {
+    color: $crypto-danger;
+  }
+}
+
+.crypto-price-list__border {
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  @include mdc-rtl {
+    left: auto;
+    right: 0;
+  }
+}

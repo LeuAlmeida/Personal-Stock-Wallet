@@ -1,0 +1,341 @@
+{% set active_page = "Profile" -%}
+
+{% extends "layouts/" + layout + ".html" %}
+
+{% block scripts %}
+  <script src="assets/js/pages/profile.js"></script>
+{% endblock %}
+
+{% block content %}
+
+  <div class="mdc-layout-grid">
+    <div class="mdc-layout-grid__inner">
+      <div class="mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone">
+        <div class="crypto-widget">
+          <h2 class="crypto-widget__heading mdc-typography--overline mdc-theme--primary">
+            <span class="crypto-widget__heading-text">Meu Perfil</span>
+            <span class="crypto-widget__heading-border"></span>
+          </h2>
+          <div class="crypto-widget__content">
+            <div class="crypto-profile">
+              <span class="crypto-profile__image mdc-elevation--z16">
+                <img  src="http://i.pravatar.cc/150?img=12" width=80 alt="Crypto">
+              </span>
+              <span class="crypto-price-list__coin-name mdc-typography--overline">Nome</span>
+              <span class="mdc-typography--overline">Léu Almeida</span>
+              <span class="crypto-price-list__coin-name mdc-typography--overline">E-mail</span>
+              <span class="mdc-typography--overline">leo@webid.net.br</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="crypto-widget">
+          <div class="crypto-widget__content">
+            <ul class="crypto-border-list">
+              <li>
+                <a href="#" class="crypto-border-list__item crypto-border-list__item--active">
+                  <span class="mdc-typography--overline crypto-border-list__text mdc-theme--text-primary-on-background">Configurações Gerais</span>
+                  <span class="crypto-border-list__action"><i class="material-icons">chevron_right</i></span>
+                  <span class="crypto-border-list__border mdc-theme--primary-bg"></span>
+                  <span class="crypto-border-list__border-hover mdc-theme--secondary-bg"></span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="crypto-border-list__item">
+                  <span class="mdc-typography--overline crypto-border-list__text mdc-theme--text-primary-on-background">Segurança</span>
+                  <span class="crypto-border-list__action"><i class="material-icons">chevron_right</i></span>
+                  <span class="crypto-border-list__border mdc-theme--primary-bg"></span>
+                  <span class="crypto-border-list__border-hover mdc-theme--secondary-bg"></span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="crypto-border-list__item">
+                  <span class="mdc-typography--overline crypto-border-list__text mdc-theme--text-primary-on-background">Notificações</span>
+                  <span class="crypto-border-list__action"><i class="material-icons">chevron_right</i></span>
+                  <span class="crypto-border-list__border mdc-theme--primary-bg"></span>
+                  <span class="crypto-border-list__border-hover mdc-theme--secondary-bg"></span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="crypto-border-list__item">
+                  <span class="mdc-typography--overline crypto-border-list__text mdc-theme--text-primary-on-background">Transações</span>
+                  <span class="crypto-border-list__action"><i class="material-icons">chevron_right</i></span>
+                  <span class="crypto-border-list__border mdc-theme--primary-bg"></span>
+                  <span class="crypto-border-list__border-hover mdc-theme--secondary-bg"></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="mdc-layout-grid__cell--span-8-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone">
+        <div class="crypto-widget">
+          <h2 class="crypto-widget__heading mdc-typography--overline mdc-theme--primary">
+            <span class="crypto-widget__heading-text">Configurações</span>
+            <span class="crypto-widget__heading-border"></span>
+          </h2>
+          <div class="crypto-widget__content">
+            <div class="settings-form-panels">
+              <div class="crypto-settings-form-panel crypto-settings-form-panel--active">
+                <form class="crypto-general-form">
+                  <div class="mdc-layout-grid__inner">
+                    <div class="mdc-layout-grid__cell--span-6">
+                      <div class="mdc-text-field mdc-text-field--transparent crypto-margin-bottom-big crypto-w-100">
+                        <input type="text" id="first-name-text-field" class="mdc-text-field__input" value="John">
+                        <label for="first-name-text-field" class="mdc-floating-label">Primeiro Nome</label>
+                        <div class="mdc-line-ripple"></div>
+                      </div>
+                    </div>
+
+                    <div class="mdc-layout-grid__cell--span-6">
+                      <div class="mdc-text-field mdc-text-field--transparent crypto-margin-bottom-big crypto-w-100">
+                        <input type="text" id="last-name-text-field" class="mdc-text-field__input" value="Langan">
+                        <label for="last-name-text-field" class="mdc-floating-label">Sobrenome</label>
+                        <div class="mdc-line-ripple"></div>
+                      </div>
+                    </div>
+
+                    <div class="mdc-layout-grid__cell--span-6">
+                      <div class="mdc-select mdc-select-box crypto-gender-select crypto-margin-bottom-big crypto-w-100" id="gender-select">
+                        <select class="mdc-select__native-control">
+                          <option value="male" selected>Masculino</option>
+                          <option value="female">Feminino</option>
+                          <option value="other">Outro</option>
+                        </select>
+                        <div class="mdc-line-ripple"></div>
+                      </div>
+                    </div>
+                    <div class="mdc-layout-grid__cell--span-6">
+                      <div class="mdc-text-field mdc-text-field--transparent crypto-margin-bottom-big crypto-w-100">
+                        <input type="number" id="age-text-field" class="mdc-text-field__input" value="39">
+                        <label for="age-text-field" class="mdc-floating-label">Idade</label>
+                        <div class="mdc-line-ripple"></div>
+                      </div>
+                    </div>
+                    <div class="mdc-layout-grid__cell--span-6">
+                      <div class="mdc-text-field mdc-text-field--transparent crypto-margin-bottom-big crypto-w-100">
+                        <input type="email" id="email-text-field" class="mdc-text-field__input" value="john.langan@oxygenna.com">
+                        <label for="email-text-field" class="mdc-floating-label">E-mail</label>
+                        <div class="mdc-line-ripple"></div>
+                      </div>
+                    </div>
+                    <div class="mdc-layout-grid__cell--span-6">
+                      <div class="mdc-text-field mdc-text-field--transparent crypto-margin-bottom-big crypto-w-100">
+                        <input type="text" id="occupation-text-field" class="mdc-text-field__input" value="Doctor">
+                        <label for="occupation-text-field" class="mdc-floating-label">Cargo</label>
+                        <div class="mdc-line-ripple"></div>
+                      </div>
+                    </div>
+                    <div class="mdc-layout-grid__cell--span-6">
+                      <a href="profile.html" class="mdc-button mdc-button--unelevated big-round-corner-button">Enviar</a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="crypto-settings-form-panel">
+                <form class="crypto-general-form">
+                  <div class="mdc-layout-grid__inner">
+                    <div class="mdc-layout-grid__cell--span-6">
+                      <div class="mdc-text-field mdc-text-field--transparent crypto-margin-bottom-big crypto-w-100">
+                        <input type="email" id="alt-email-text-field" class="mdc-text-field__input">
+                        <label for="alt-email-text-field" class="mdc-floating-label">E-mail Alternativo</label>
+                        <div class="mdc-line-ripple"></div>
+                      </div>
+                    </div>
+                    <div class="mdc-layout-grid__cell--span-6">
+                      <div class="mdc-text-field mdc-text-field--transparent crypto-margin-bottom-big mdc-text-field--fullwidth">
+                        <input type="tel" id="tel-text-field" class="mdc-text-field__input">
+                        <label for="tel-text-field" class="mdc-floating-label">Celular</label>
+                        <div class="mdc-line-ripple"></div>
+                      </div>
+                    </div>
+                    <div class="mdc-layout-grid__cell--span-6">
+                      <div class="mdc-text-field mdc-text-field--transparent crypto-margin-bottom-big crypto-w-100">
+                        <input required pattern=".{8,}"
+                        id="pw"
+                        type="password"
+                        class="mdc-text-field__input"
+                        autocomplete="current-password" />
+                        <label for="pw" class="mdc-floating-label">Senha</label>
+                        <div class="mdc-line-ripple"></div>
+                      </div>
+                    </div>
+                    <div class="mdc-layout-grid__cell--span-6">
+                      <div class="mdc-text-field mdc-text-field--transparent crypto-margin-bottom-big crypto-w-100">
+                        <input required pattern=".{8,}"
+                          id="confirm-pw"
+                          type="password"
+                          class="mdc-text-field__input"
+                          autocomplete="current-password" />
+                        <label for="confirm-pw" class="mdc-floating-label">Confirmar Senha</label>
+                        <div class="mdc-line-ripple"></div>
+                      </div>
+                    </div>
+                    <div class="mdc-layout-grid__cell--span-6">
+                      <a href="profile.html" class="mdc-button mdc-button--unelevated big-round-corner-button">Enviar</a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="crypto-settings-form-panel">
+                <form class="crypto-general-form">
+                  <div class="mdc-layout-grid__inner crypto-margin-bottom-big">
+                    <div class="mdc-layout-grid__cell--span-6">
+                      <div class="mdc-form-field">
+                        <div class="mdc-checkbox">
+                          <input type="checkbox" class="mdc-checkbox__native-control" id="schedules-checkbox"/>
+                          <div class="mdc-checkbox__background">
+                            <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                              <path class="mdc-checkbox__checkmark-path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                            </svg>
+                            <div class="mdc-checkbox__mixedmark"></div>
+                          </div>
+                        </div>
+                        <label for="schedules-checkbox">Envie-me notificações periódicas</label>
+                      </div>
+                    </div>
+                    <div class="mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--align-middle">
+                      <div class="switch-wrapper">
+                        <div class="mdc-switch crypto-switch-selector">
+                          <div class="mdc-switch__track"></div>
+                          <div class="mdc-switch__thumb-underlay">
+                            <div class="mdc-switch__thumb">
+                              <input type="checkbox" id="avatar-switch" class="mdc-switch__native-control" role="switch" aria-checked="false">
+                            </div>
+                          </div>
+                        </div>
+                        <label for="avatar-switch">Exibir avatar</label>
+                      </div>
+                    </div>
+                    <div class="mdc-layout-grid__cell--span-6">
+                      <div class="mdc-form-field">
+                        <div class="mdc-checkbox">
+                          <input type="checkbox" class="mdc-checkbox__native-control" id="devices-checkbox"/>
+                          <div class="mdc-checkbox__background">
+                            <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                              <path class="mdc-checkbox__checkmark-path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                            </svg>
+                            <div class="mdc-checkbox__mixedmark"></div>
+                          </div>
+                        </div>
+                        <label for="devices-checkbox">Manter todos os dispositivos móveis desconectados</label>
+                      </div>
+                    </div>
+                    <div class="mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--align-middle">
+                      <div class="switch-wrapper">
+                        <div class="mdc-switch crypto-switch-selector">
+                          <div class="mdc-switch__track"></div>
+                          <div class="mdc-switch__thumb-underlay">
+                            <div class="mdc-switch__thumb">
+                              <input type="checkbox" id="personal-switch" class="mdc-switch__native-control" role="switch" aria-checked="false">
+                            </div>
+                          </div>
+                        </div>
+                        <label for="personal-switch">Ocultar dados pessoais</label>
+                      </div>
+                    </div>
+                    <div class="mdc-layout-grid__cell--span-6">
+                      <div class="mdc-form-field">
+                        <div class="mdc-checkbox">
+                          <input type="checkbox" class="mdc-checkbox__native-control" id="authentication-checkbox"/>
+                          <div class="mdc-checkbox__background">
+                            <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                              <path class="mdc-checkbox__checkmark-path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                            </svg>
+                            <div class="mdc-checkbox__mixedmark"></div>
+                          </div>
+                        </div>
+                        <label for="authentication-checkbox">Permitir autenticação de dois fatores</label>
+                      </div>
+                    </div>
+                    <div class="mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--align-middle">
+                      <div class="mdc-form-field">
+                        <div class="mdc-switch crypto-switch-selector">
+                          <div class="mdc-switch__track"></div>
+                          <div class="mdc-switch__thumb-underlay">
+                            <div class="mdc-switch__thumb">
+                              <input type="checkbox" id="notification-switch" class="mdc-switch__native-control" role="switch" aria-checked="false">
+                            </div>
+                          </div>
+                        </div>
+                        <label for="notification-switch">Silenciar todas notificações</label>
+                      </div>
+                    </div>
+                    <div class="mdc-layout-grid__cell--span-6">
+                      <a href="profile.html" class="mdc-button mdc-button--unelevated big-round-corner-button">Save</a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="crypto-settings-form-panel">
+                <form class="crypto-general-form">
+                  <div class="mdc-layout-grid__inner crypto-margin-bottom-big">
+                    <div class="mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--align-middle">
+                      <div class="mdc-form-field">
+                        <div class="mdc-checkbox">
+                          <input type="checkbox" class="mdc-checkbox__native-control" id="transactions-checkbox"/>
+                          <div class="mdc-checkbox__background">
+                            <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                              <path class="mdc-checkbox__checkmark-path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                            </svg>
+                            <div class="mdc-checkbox__mixedmark"></div>
+                          </div>
+                        </div>
+                        <label for="transactions-checkbox">Desabilitar todas transações</label>
+                      </div>
+                    </div>
+                    <div class="mdc-layout-grid__cell--span-6">
+                      <div class="crypto-display-flex mdc-layout-grid__cell--align-middle">
+                        <div class="mdc-select mdc-select-box crypto-currency-select" id="currency-select">
+                          <select class="mdc-select__native-control">
+                            <option value="brl" selected>BRL</option>
+                            <option value="usd">USD</option>
+                            <option value="euro">EUR</option>
+                          </select>
+                          <label class="mdc-floating-label mdc-floating-label--float-above">Moeda de Transações</label>
+                          <div class="mdc-line-ripple"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mdc-layout-grid__cell--span-6">
+                      <div class="mdc-form-field">
+                        <div class="mdc-checkbox">
+                          <input type="checkbox" class="mdc-checkbox__native-control" id="delete-transactions-checkbox"/>
+                          <div class="mdc-checkbox__background">
+                            <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                              <path class="mdc-checkbox__checkmark-path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                            </svg>
+                            <div class="mdc-checkbox__mixedmark"></div>
+                          </div>
+                        </div>
+                        <label for="delete-transactions-checkbox">Excluir transações a mais de 6 meses</label>
+                      </div>
+                    </div>
+                    <div class="mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--align-middle">
+                      <div class="mdc-form-field">
+                        <div class="mdc-switch crypto-switch-selector">
+                          <div class="mdc-switch__track"></div>
+                          <div class="mdc-switch__thumb-underlay">
+                            <div class="mdc-switch__thumb">
+                              <input type="checkbox" id="yolo-switch" class="mdc-switch__native-control" role="switch" aria-checked="false">
+                            </div>
+                          </div>
+                        </div>
+                        <label for="yolo-switch">Silenciar todas notificações</label>
+                      </div>
+                    </div>
+                    <div class="mdc-layout-grid__cell--span-6">
+                       <a href="profile.html" class="mdc-button mdc-button--unelevated big-round-corner-button">Salvar</a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
+

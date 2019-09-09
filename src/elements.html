@@ -1,0 +1,724 @@
+{% set active_page = "Elements" -%}
+
+{% extends "layouts/" + layout + ".html" %}
+
+{% block content %}
+  <div class="mdc-layout-grid mdc-layout-grid--demo">
+    <div class="mdc-layout-grid__inner">
+      <div class="mdc-layout-grid__cell--span-1-desktop"></div>
+      <div class="mdc-layout-grid__cell--span-10-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone">
+        <div class="crypto-widget crypto-widget--margin-bottom">
+          <h2 class="crypto-widget__heading crypto-widget__heading--fullwidth mdc-typography--headline6 mdc-theme--primary">
+            <span class="crypto-widget__heading-text">Buttons</span>
+            <span class="crypto-widget__heading-border"></span>
+          </h2>
+          <div class="crypto-widget__content">
+            <p class="mdc-typography--body1">Buttons allow users to take actions, and make choices, with a single tap.</p>
+            <p class="mdc-typography--body1">Material buttons trigger an ink reaction on press. They may display text, imagery, or both. There are four standard types of buttons:</p>
+            <ul class="crypto-list mdc-typography--body1">
+              <li><strong>Text button (low emphasis):</strong> Text buttons are typically used for less important actions.</li>
+              <li><strong>Outlined Button (medium emphasis):</strong> Outlined buttons are used for more emphasis than text buttons due to the stroke.</li>
+              <li><strong>Contained button (high emphasis):</strong> Contained buttons have more emphasis, as they use use a color fill and shadow.</li>
+              <li><strong>Toggle button:</strong> Toggle buttons group a set of actions using layout and spacing. They’re used less often than other button type.</li>
+            </ul>
+            <fieldset>
+              <legend class="mdc-typography--subheading2">Text Button</legend>
+              <div>
+                <button class="mdc-button">
+                  Baseline
+                </button>
+                <button class="mdc-button mdc-button--dense">
+                  Dense
+                </button>
+                <button class="mdc-button mdc-theme--secondary">
+                  Secondary
+                </button>
+                <button class="mdc-button">
+                  <i class="material-icons mdc-button__icon" aria-hidden="true">favorite</i>
+                  Icon
+                </button>
+                <button class="mdc-button">
+                  <svg class="mdc-button__icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#000000">
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                    <path d="M23 12c0-6.07-4.93-11-11-11S1 5.93 1 12s4.93 11 11 11 11-4.93 11-11zM5 17.64C3.75 16.1 3 14.14 3 12c0-2.13.76-4.08 2-5.63v11.27zM17.64 5H6.36C7.9 3.75 9.86 3 12 3s4.1.75 5.64 2zM12 14.53L8.24 7h7.53L12 14.53zM17 9v8h-4l4-8zm-6 8H7V9l4 8zm6.64 2c-1.55 1.25-3.51 2-5.64 2s-4.1-.75-5.64-2h11.28zM21 12c0 2.14-.75 4.1-2 5.64V6.37c1.24 1.55 2 3.5 2 5.63z"></path>
+                  </svg>
+                  SVG Icon
+                </button>
+                <a href="javascript:void(0)" class="mdc-button">
+                  Link
+                </a>
+              </div>
+            </fieldset><br>
+            <fieldset>
+              <legend class="mdc-typography--headline6">Contained Button</legend>
+              <div>
+                <button class="mdc-button mdc-button--raised mdc-ripple-upgraded">
+                  Baseline
+                </button>
+                <button class="mdc-button mdc-button--raised mdc-button--dense mdc-ripple-upgraded">
+                  Dense
+                </button>
+                <button class="mdc-button mdc-button--raised mdc-theme--secondary-bg mdc-ripple-upgraded">
+                  Secondary
+                </button>
+                <button class="mdc-button mdc-button--raised mdc-ripple-upgraded">
+                  <i class="material-icons mdc-button__icon" aria-hidden="true">favorite</i>
+                  Icon
+                </button>
+                <button class="mdc-button mdc-button--raised mdc-ripple-upgraded">
+                  <svg class="mdc-button__icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#000000">
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                    <path d="M23 12c0-6.07-4.93-11-11-11S1 5.93 1 12s4.93 11 11 11 11-4.93 11-11zM5 17.64C3.75 16.1 3 14.14 3 12c0-2.13.76-4.08 2-5.63v11.27zM17.64 5H6.36C7.9 3.75 9.86 3 12 3s4.1.75 5.64 2zM12 14.53L8.24 7h7.53L12 14.53zM17 9v8h-4l4-8zm-6 8H7V9l4 8zm6.64 2c-1.55 1.25-3.51 2-5.64 2s-4.1-.75-5.64-2h11.28zM21 12c0 2.14-.75 4.1-2 5.64V6.37c1.24 1.55 2 3.5 2 5.63z"></path>
+                  </svg>
+                  SVG Icon
+                </button>
+                <a href="javascript:void(0)" class="mdc-button mdc-button--raised mdc-ripple-upgraded">
+                  Link
+                </a>
+              </div>
+            </fieldset><br>
+            <fieldset>
+              <legend class="mdc-typography--subheading2">Contained Button</legend>
+              <div>
+                <button class="mdc-button mdc-button--raised">
+                  Baseline
+                </button>
+                <button class="mdc-button mdc-button--raised mdc-button--compact">
+                  Compact
+                </button>
+                <button class="mdc-button mdc-button--raised mdc-button--dense">
+                  Dense
+                </button>
+                <button class="mdc-button mdc-button--raised mdc-theme--secondary-bg">
+                  Secondary
+                </button>
+                <button class="mdc-button mdc-button--raised">
+                  <i class="material-icons mdc-button__icon">favorite</i>
+                  Icon
+                </button>
+                <a href="javascript:void(0)" class="mdc-button mdc-button--raised">
+                  Link
+                </a>
+              </div>
+            </fieldset><br>
+            <fieldset>
+              <legend class="mdc-typography--subheading2">Outlined Button</legend>
+              <div>
+                <button class="mdc-button mdc-button--outlined">
+                  Baseline
+                </button>
+                <button class="mdc-button mdc-button--outlined mdc-button--compact">
+                  Compact
+                </button>
+                <button class="mdc-button mdc-button--outlined mdc-button--dense">
+                  Dense
+                </button>
+                <button class="mdc-button mdc-button--outlined mdc-theme--secondary">
+                  Secondary
+                </button>
+                <button class="mdc-button mdc-button--outlined">
+                  <i class="material-icons mdc-button__icon">favorite</i>
+                  Icon
+                </button>
+                <a href="javascript:void(0)" class="mdc-button mdc-button--outlined">
+                  Link
+                </a>
+              </div>
+            </fieldset><br>
+          </div>
+        </div>
+        <div class="crypto-widget crypto-widget--margin-bottom">
+          <h2 class="crypto-widget__heading crypto-widget__heading--fullwidth mdc-typography--headline6 mdc-theme--primary">
+            <span class="crypto-widget__heading-text">Linear Progress</span>
+            <span class="crypto-widget__heading-border"></span>
+          </h2>
+          <div class="crypto-widget__content">
+            <p class="mdc-typography--body1">Progress and activity indicators are visual indications of an app loading content.</p>
+            <p class="mdc-typography--body1">A single visual indicator should be used to represent each type of operation. For example, a refresh operation should display either a refresh bar or an activity circle, but not both.</p>
+            <ul class="crypto-list mdc-typography--body1">
+              <li><strong>Determinate indicators</strong> display how long an operation will take.</li>
+              <li><strong>Indeterminate indicators</strong> visualize an unspecified wait time.</li>
+            </ul><br>
+
+            <figure class="crypto-linear-progress-demo">
+              <div role="progressbar" class="mdc-linear-progress">
+                <div class="mdc-linear-progress__buffering-dots"></div>
+                <div class="mdc-linear-progress__buffer"></div>
+                <div class="mdc-linear-progress__bar mdc-linear-progress__primary-bar">
+                  <span class="mdc-linear-progress__bar-inner"></span>
+                </div>
+                <div class="mdc-linear-progress__bar mdc-linear-progress__secondary-bar">
+                  <span class="mdc-linear-progress__bar-inner"></span>
+                </div>
+              </div>
+              <figcaption>Determinate</figcaption>
+            </figure>
+
+            <figure class="crypto-linear-progress-demo">
+              <div role="progressbar" class="mdc-linear-progress mdc-linear-progress--indeterminate">
+                <div class="mdc-linear-progress__buffering-dots"></div>
+                <div class="mdc-linear-progress__buffer"></div>
+                <div class="mdc-linear-progress__bar mdc-linear-progress__primary-bar">
+                  <span class="mdc-linear-progress__bar-inner"></span>
+                </div>
+                <div class="mdc-linear-progress__bar mdc-linear-progress__secondary-bar">
+                  <span class="mdc-linear-progress__bar-inner"></span>
+                </div>
+              </div>
+              <figcaption>Indeterminate</figcaption>
+            </figure>
+
+            <figure class="crypto-linear-progress-demo">
+              <div role="progressbar" class="mdc-linear-progress" data-buffer="true">
+                <div class="mdc-linear-progress__buffering-dots"></div>
+                <div class="mdc-linear-progress__buffer"></div>
+                <div class="mdc-linear-progress__bar mdc-linear-progress__primary-bar">
+                  <span class="mdc-linear-progress__bar-inner"></span>
+                </div>
+                <div class="mdc-linear-progress__bar mdc-linear-progress__secondary-bar">
+                  <span class="mdc-linear-progress__bar-inner"></span>
+                </div>
+              </div>
+              <figcaption>Buffer</figcaption>
+            </figure>
+
+            <figure class="crypto-linear-progress-demo">
+              <div role="progressbar" class="mdc-linear-progress mdc-linear-progress--reversed">
+                <div class="mdc-linear-progress__buffering-dots"></div>
+                <div class="mdc-linear-progress__buffer"></div>
+                <div class="mdc-linear-progress__bar mdc-linear-progress__primary-bar">
+                  <span class="mdc-linear-progress__bar-inner"></span>
+                </div>
+                <div class="mdc-linear-progress__bar mdc-linear-progress__secondary-bar">
+                  <span class="mdc-linear-progress__bar-inner"></span>
+                </div>
+              </div>
+              <figcaption>Reversed</figcaption>
+            </figure>
+
+            <figure class="crypto-linear-progress-demo">
+              <div role="progressbar" class="mdc-linear-progress mdc-linear-progress--indeterminate mdc-linear-progress--reversed">
+                <div class="mdc-linear-progress__buffering-dots"></div>
+                <div class="mdc-linear-progress__buffer"></div>
+                <div class="mdc-linear-progress__bar mdc-linear-progress__primary-bar">
+                  <span class="mdc-linear-progress__bar-inner"></span>
+                </div>
+                <div class="mdc-linear-progress__bar mdc-linear-progress__secondary-bar">
+                  <span class="mdc-linear-progress__bar-inner"></span>
+                </div>
+              </div>
+              <figcaption>Indeterminate Reversed</figcaption>
+            </figure>
+
+            <figure class="crypto-linear-progress-demo">
+              <div role="progressbar" class="mdc-linear-progress mdc-linear-progress--reversed" data-buffer="true">
+                <div class="mdc-linear-progress__buffering-dots"></div>
+                <div class="mdc-linear-progress__buffer"></div>
+                <div class="mdc-linear-progress__bar mdc-linear-progress__primary-bar">
+                  <span class="mdc-linear-progress__bar-inner"></span>
+                </div>
+                <div class="mdc-linear-progress__bar mdc-linear-progress__secondary-bar">
+                  <span class="mdc-linear-progress__bar-inner"></span>
+                </div>
+              </div>
+              <figcaption>Buffer Reversed</figcaption>
+            </figure>
+
+            <figure class="crypto-linear-progress-demo">
+              <div role="progressbar" class="mdc-linear-progress demo-linear-progress--custom" data-buffer="true">
+                <div class="mdc-linear-progress__buffering-dots"></div>
+                <div class="mdc-linear-progress__buffer"></div>
+                <div class="mdc-linear-progress__bar mdc-linear-progress__primary-bar">
+                  <span class="mdc-linear-progress__bar-inner"></span>
+                </div>
+                <div class="mdc-linear-progress__bar mdc-linear-progress__secondary-bar">
+                  <span class="mdc-linear-progress__bar-inner"></span>
+                </div>
+              </div>
+              <figcaption>Custom Colors with Buffer</figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="crypto-widget crypto-widget--margin-bottom">
+          <h2 class="crypto-widget__heading crypto-widget__heading--fullwidth mdc-typography--headline6 mdc-theme--primary">
+            <span class="crypto-widget__heading-text">Cards</span>
+            <span class="crypto-widget__heading-border"></span>
+          </h2>
+          <div class="crypto-widget__content">
+            <p class="mdc-typography--body1">A card is a sheet of material that serves as an entry point to more detailed information.</p>
+            <p class="mdc-typography--body1">Cards may contain a photo, text, and a link about a single subject. They may display content containing elements of varying size, such as photos with captions of variable length.</p>
+            <p class="mdc-typography--body1">Use a card layout when displaying content that:</p>
+            <ul class="crypto-list mdc-typography--body1">
+              <li>As a collection, comprises multiple data types, such as images, movies, and text</li>
+              <li>Does not require direct comparison (a user is not directly comparing images or text)</li>
+              <li>Supports content of highly variable length, such as comments</li>
+              <li>Contains interactive content, such as +1 buttons or comments</li>
+              <li>Would otherwise be in a grid list but needs to display more content to supplement the image</li>
+            </ul>
+            <div class="mdc-card crypto-card crypto-card--center crypto-card--demo mdc-elevation--z24">
+              <div class="mdc-card__media mdc-theme--secondary-bg"></div>
+              <header class="crypto-card__header crypto-card__header--avatar">
+                <img class="crypto-card__header__avatar" src="assets/images/avatar-demo.png" width="40" height="40" alt="Brown Bear">
+                <div class="crypto-card__header__heading">
+                  <h1 class="crypto-card__header--title">Our Changing Planet</h1>
+                  <h2 class="crypto-card__header--subtitle">by Kurt Wagner</h2>
+                </div>
+              </header>
+              <div class="crypto-card__content mdc-typography--body1">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem omnis veritatis deleniti assumenda iusto vel rem eveniet molestias sapiente recusandae impedit soluta, officia officiis alias quaerat beatae, nemo laboriosam aut?
+              </div>
+              <div class="mdc-card__actions crypto-card__actions">
+                <div class="mdc-card__action-buttons">
+                  <button class="mdc-button mdc-card__action mdc-card__action--button">Read</button>
+                  <button class="mdc-button mdc-card__action mdc-card__action--button">Bookmark</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="crypto-widget crypto-widget--margin-bottom">
+          <h2 class="crypto-widget__heading crypto-widget__heading--fullwidth mdc-typography--headline6 mdc-theme--primary">
+            <span class="crypto-widget__heading-text">Tabs</span>
+            <span class="crypto-widget__heading-border"></span>
+          </h2>
+          <div class="crypto-widget__content">
+            <p class="mdc-typography--body1">Tabs enable content organization at a high level, such as switching between views, data sets, or functional aspects of an app.</p>
+            <p class="mdc-typography--body1">Present tabs as a single row above their associated content. Tab labels should succinctly describe the content within.</p>
+            <p class="mdc-typography--body1">Because swipe gestures are used for navigating between tabs, don't pair tabs with content that also supports swiping.</p>
+            <br>
+            <div class="mdc-tab-bar" role="tablist">
+              <div class="mdc-tab-scroller">
+                <div class="mdc-tab-scroller__scroll-area">
+                  <div class="mdc-tab-scroller__scroll-content">
+                    <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
+                      <span class="mdc-tab__content">
+                        <span class="mdc-tab__icon material-icons">phone</span>
+                        <span class="mdc-tab__text-label">Recents</span>
+                      </span>
+                      <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                        <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                      </span>
+                      <span class="mdc-tab__ripple"></span>
+                    </button>
+                    <button class="mdc-tab" role="tab" aria-selected="true" tabindex="0">
+                      <span class="mdc-tab__content">
+                        <span class="mdc-tab__icon material-icons">favorite</span>
+                        <span class="mdc-tab__text-label">Favorites</span>
+                      </span>
+                      <span class="mdc-tab-indicator">
+                        <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                      </span>
+                      <span class="mdc-tab__ripple"></span>
+                    </button>
+                    <button class="mdc-tab" role="tab" aria-selected="true" tabindex="0">
+                      <span class="mdc-tab__content">
+                        <span class="mdc-tab__icon material-icons">person_pin</span>
+                        <span class="mdc-tab__text-label">Person</span>
+                      </span>
+                      <span class="mdc-tab-indicator">
+                        <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                      </span>
+                      <span class="mdc-tab__ripple"></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="crypto-widget crypto-widget--margin-bottom">
+          <h2 class="crypto-widget__heading crypto-widget__heading--fullwidth mdc-typography--headline6 mdc-theme--primary">
+            <span class="crypto-widget__heading-text">Checkbox</span>
+            <span class="crypto-widget__heading-border"></span>
+          </h2>
+          <div class="crypto-widget__content">
+            <p class="mdc-typography--body1">Checkboxes allow the user to select multiple options from a set. If you have multiple options appearing in a list, you can preserve space by using checkboxes instead of on/off switches. If you have a single option, avoid using a checkbox and use an on/off switch instead.</p>
+            <p class="mdc-typography--body1">The MDC Checkbox component is a spec-aligned checkbox component adhering to the <a target="_blank" href="https://material.io/guidelines/components/selection-controls.html#selection-controls-checkbox">Material Design checkbox requirements</a>. It works without JavaScript with basic functionality for all states. If you use the JavaScript object for a checkbox, it will add more intricate animation effects when switching between states.</p>
+            <div>
+              <div class="mdc-form-field">
+                <div class="mdc-checkbox">
+                  <input type="checkbox"
+                          id="basic-checkbox"
+                          class="mdc-checkbox__native-control"/>
+                  <div class="mdc-checkbox__background">
+                    <svg class="mdc-checkbox__checkmark"
+                          viewBox="0 0 24 24">
+                      <path class="mdc-checkbox__checkmark-path"
+                            fill="none"
+                            stroke="white"
+                            d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                    </svg>
+                    <div class="mdc-checkbox__mixedmark"></div>
+                  </div>
+                </div>
+                <label for="basic-checkbox">Default checkbox</label>
+              </div>
+            </div>
+            <div>
+              <div class="mdc-form-field">
+                <div class="mdc-checkbox mdc-checkbox--disabled">
+                  <input type="checkbox"
+                    id="basic-disabled-checkbox"
+                    class="mdc-checkbox__native-control"
+                    disabled />
+                  <div class="mdc-checkbox__background">
+                    <svg class="mdc-checkbox__checkmark"
+                      viewBox="0 0 24 24">
+                      <path class="mdc-checkbox__checkmark-path"
+                        fill="none"
+                        stroke="white"
+                        d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                    </svg>
+                    <div class="mdc-checkbox__mixedmark"></div>
+                  </div>
+                </div>
+                <label for="basic-disabled-checkbox">Disabled checkbox</label>
+              </div>
+            </div>
+            <div>
+              <div class="mdc-form-field">
+                <div class="mdc-checkbox">
+                  <input type="checkbox"
+                          id="basic-indeterminate-checkbox"
+                          class="mdc-checkbox__native-control"/>
+                  <div class="mdc-checkbox__background">
+                    <svg class="mdc-checkbox__checkmark"
+                          viewBox="0 0 24 24">
+                      <path class="mdc-checkbox__checkmark-path"
+                            fill="none"
+                            stroke="white"
+                            d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                    </svg>
+                    <div class="mdc-checkbox__mixedmark"></div>
+                  </div>
+                </div>
+                <label for="basic-indeterminate-checkbox">Indeterminate checkbox</label>
+              </div>
+            </div>
+            <div>
+              <div class="mdc-form-field">
+                <div class="mdc-checkbox crypto-checkbox--custom-all">
+                  <input type="checkbox"
+                          id="basic-custom-checkbox-all"
+                          class="mdc-checkbox__native-control" />
+                  <div class="mdc-checkbox__background">
+                    <svg class="mdc-checkbox__checkmark"
+                          viewBox="0 0 24 24">
+                      <path class="mdc-checkbox__checkmark-path"
+                            fill="none"
+                            stroke="white"
+                            d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                    </svg>
+                    <div class="mdc-checkbox__mixedmark"></div>
+                  </div>
+                </div>
+                <label for="basic-custom-checkbox-all">Custom colored checkbox (stroke, fill, ripple, and focus)</label>
+              </div>
+            </div>
+            <div>
+              <div class="mdc-form-field">
+                <div class="mdc-checkbox crypto-checkbox--custom-stroke-and-fill">
+                  <input type="checkbox"
+                          id="basic-custom-checkbox-stroke-and-fill"
+                          class="mdc-checkbox__native-control" />
+                  <div class="mdc-checkbox__background">
+                    <svg class="mdc-checkbox__checkmark"
+                          viewBox="0 0 24 24">
+                      <path class="mdc-checkbox__checkmark-path"
+                            fill="none"
+                            stroke="white"
+                            d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                    </svg>
+                    <div class="mdc-checkbox__mixedmark"></div>
+                  </div>
+                </div>
+                <label for="basic-custom-checkbox-stroke-and-fill">Custom colored checkbox (stroke and fill only)</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="crypto-widget crypto-widget--margin-bottom">
+          <h2 class="crypto-widget__heading crypto-widget__heading--fullwidth mdc-typography--headline6 mdc-theme--primary">
+            <span class="crypto-widget__heading-text">Inputs</span>
+            <span class="crypto-widget__heading-border"></span>
+          </h2>
+          <div class="crypto-widget__content">
+            <p class="mdc-typography--body1">Inputs typically reside in forms but can appear in other places, like dialog boxes and search.</p>
+            <p class="mdc-typography--body1">The following input types can be used:</p>
+            <ul class="crypto-list mdc-typography--body1 crypto-list--columns-2">
+              <li>date</li>
+              <li>datetime-local</li>
+              <li>email</li>
+              <li>month</li>
+              <li>number</li>
+              <li>password</li>
+              <li>search</li>
+              <li>tel</li>
+              <li>text</li>
+              <li>time</li>
+              <li>url</li>
+              <li>week</li>
+            </ul>
+            <div class="mdc-layout-grid">
+              <div class="mdc-layout-grid__inner">
+                <div class="mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone">
+                  <h3>
+                    Text field
+                  </h3>
+                  <div class="mdc-text-field">
+                    <input type="text" id="my-text-field" class="mdc-text-field__input">
+                    <label class="mdc-floating-label" for="my-text-field">Hint text</label>
+                    <div class="mdc-line-ripple"></div>
+                  </div>
+                  <p id="my-text-field-helper-text" class="mdc-text-field-helper-text">
+                    Input field with hints and placeholder
+                  </p>
+
+                  <h3>
+                    Text Field - Leading/Trailing icons
+                  </h3>
+                  <div class="crypto-mdc-text-fields crypto-display-flex crypto-display-flex--column crypto-display-flex--space-between">
+                    <div id="tf-box-leading-example"
+                      class="mdc-text-field mdc-text-field--with-leading-icon">
+                      <i class="material-icons mdc-text-field__icon" tabindex="0">event</i>
+                      <input type="text" id="tf-box-leading" class="mdc-text-field__input">
+                      <label for="tf-box-leading" class="mdc-floating-label">Your name</label>
+                      <div class="mdc-line-ripple"></div>
+                    </div>
+                    <div id="tf-box-trailing-example"
+                      class="mdc-text-field mdc-text-field--with-trailing-icon">
+                      <input type="text" id="tf-box-trailing" class="mdc-text-field__input">
+                      <label for="tf-box-trailing" class="mdc-floating-label">Your other name</label>
+                      <i class="material-icons mdc-text-field__icon" tabindex="0">delete</i>
+                      <div class="mdc-line-ripple"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone">
+                  <h3>
+                    Password field with validation
+                  </h3>
+                  <div class="mdc-text-field mdc-text-field--fullwidth">
+                    <input required pattern=".{8,}" type="password" class="mdc-text-field__input" id="pw"
+                      aria-controls="pw-validation-msg"
+                      autocomplete="current-password">
+                    <label for="pw" class="mdc-floating-label">Choose password</label>
+                    <div class="mdc-line-ripple"></div>
+                  </div>
+                  <p class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent mdc-text-field-helper-text--validation-msg"
+                      id="pw-validation-msg">
+                    Must be at least 8 characters long
+                  </p>
+
+                  <h3>
+                    Text Field and Textarea
+                  </h3>
+
+                  <div id="demo-fullwidth-wrapper">
+                    <div class="mdc-text-field mdc-text-field--fullwidth">
+                      <input class="mdc-text-field__input" type="text" placeholder="Subject" aria-label="Subject">
+                      <div class="mdc-line-ripple"></div>
+                    </div><br>
+                    <div class="mdc-text-field mdc-text-field--textarea mdc-text-field--fullwidth full-width-textarea-example">
+                      <textarea id="full-width-textarea" class="mdc-text-field__input" rows="8"></textarea>
+                      <label for="full-width-textarea" class="mdc-floating-label">Textarea Label</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="crypto-widget crypto-widget--margin-bottom">
+          <h2 class="crypto-widget__heading crypto-widget__heading--fullwidth mdc-typography--headline6 mdc-theme--primary">
+            <span class="crypto-widget__heading-text">Radio</span>
+            <span class="crypto-widget__heading-border"></span>
+          </h2>
+          <div class="crypto-widget__content">
+            <p class="mdc-typography--body1">Radio buttons allow the user to select one option from a set. Use radio buttons for exclusive selection if you think that the user needs to see all available options side-by-side.</p>
+            <p class="mdc-typography--body1">Otherwise, consider a dropdown, which uses less space than displaying all options.</p>
+            <div class="mdc-layout-grid">
+              <div class="mdc-layout-grid__inner">
+                <div class="mdc-layout-grid__cell--span-6-desktop">
+                  <div class="mdc-form-field crypto-form-field">
+                    <div class="mdc-radio">
+                      <input class="mdc-radio__native-control" type="radio" id="ex0-default-radio1" checked name="ex0-default">
+                      <div class="mdc-radio__background">
+                        <div class="mdc-radio__outer-circle"></div>
+                        <div class="mdc-radio__inner-circle"></div>
+                      </div>
+                    </div>
+                    <label id="ex0-default-radio1-label" for="ex0-default-radio1">Default Radio 1</label>
+                  </div>
+                  <div class="mdc-form-field crypto-form-field">
+                    <div class="mdc-radio">
+                      <input class="mdc-radio__native-control" type="radio" id="ex0-default-radio2" name="ex0-default">
+                      <div class="mdc-radio__background">
+                        <div class="mdc-radio__outer-circle"></div>
+                        <div class="mdc-radio__inner-circle"></div>
+                      </div>
+                    </div>
+                    <label id="ex0-default-radio2-label" for="ex0-default-radio2">Default Radio 2</label>
+                  </div>
+                </div>
+                <div class="mdc-layout-grid__cell--span-6-desktop">
+                  <div class="demo-radio-row">
+                    <div class="mdc-form-field crypto-form-field">
+                      <div class="mdc-radio crypto-radio-custom">
+                        <input class="mdc-radio__native-control" type="radio" id="ex0-custom-radio1" checked name="ex0-custom">
+                        <div class="mdc-radio__background">
+                          <div class="mdc-radio__outer-circle"></div>
+                          <div class="mdc-radio__inner-circle"></div>
+                        </div>
+                      </div>
+                      <label id="ex0-custom-radio1-label" for="ex0-custom-radio1">Custom Radio 1</label>
+                    </div>
+                    <div class="mdc-form-field crypto-form-field">
+                      <div class="mdc-radio crypto-radio-custom">
+                        <input class="mdc-radio__native-control" type="radio" id="ex0-custom-radio2" name="ex0-custom">
+                        <div class="mdc-radio__background">
+                          <div class="mdc-radio__outer-circle"></div>
+                          <div class="mdc-radio__inner-circle"></div>
+                        </div>
+                      </div>
+                      <label id="ex0-custom-radio2-label" for="ex0-custom-radio2">Custom Radio 2</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="crypto-widget crypto-widget--margin-bottom">
+          <h2 class="crypto-widget__heading crypto-widget__heading--fullwidth mdc-typography--headline6 mdc-theme--primary">
+            <span class="crypto-widget__heading-text">Select</span>
+            <span class="crypto-widget__heading-border"></span>
+          </h2>
+          <div class="crypto-widget__content">
+            <p class="mdc-typography--body1">MDC Select provides Material Design single-option and multi-option select menus.</p>
+            <p class="mdc-typography--body1">It functions analogously to the browser’s native <i>select</i> element, and includes a gracefully degraded version that can be used in conjunction with the browser’s native element.</p>
+            <p class="mdc-typography--body1">Both are fully accessible, and fully RTL-aware.</p>
+            <div class="mdc-select">
+              <select class="mdc-select__native-control">
+                <option value="grains" selected>
+                  Bread, Cereal, Rice, and Pasta
+                </option>
+                <option value="vegetables">
+                  Vegetables
+                </option>
+                <option value="fruit">
+                  Fruit
+                </option>
+              </select>
+              <label class="mdc-floating-label">Pick a Food Group</label>
+              <div class="mdc-line-ripple"></div>
+            </div>
+          </div>
+        </div>
+        <div class="crypto-widget crypto-widget--margin-bottom">
+          <h2 class="crypto-widget__heading crypto-widget__heading--fullwidth mdc-typography--headline6 mdc-theme--primary">
+            <span class="crypto-widget__heading-text">Slider</span>
+            <span class="crypto-widget__heading-border"></span>
+          </h2>
+          <div class="crypto-widget__content">
+            <p class="mdc-typography--body1">Sliders are ideal components for adjusting settings that reflect intensity levels, such as volume, brightness, or color saturation.</p>
+            <p class="mdc-typography--body1">Sliders may have icons on both ends of the bar that reflect the value intensity. Place the smallest value for the slider range on the left and the largest value on the right.</p>
+            <ul class="portal-list mdc-typography--body1">
+              <li><strong>Continuous sliders</strong> allow users to select a value along a subjective range. They do not require a specific value to make adjustments.</li>
+              <li><strong>Discrete sliders</strong> allow users to select a specific value from a range.</li>
+            </ul>
+            <h3>Continuous Slider</h3>
+            <div class="mdc-slider" tabindex="0" role="slider"
+                aria-valuemin="0" aria-valuemax="50" aria-valuenow="20"
+                aria-label="Select Value">
+              <div class="mdc-slider__track-container">
+                <div class="mdc-slider__track"></div>
+              </div>
+              <div class="mdc-slider__thumb-container">
+                <svg class="mdc-slider__thumb" width="21" height="21">
+                  <circle cx="10.5" cy="10.5" r="7.875"></circle>
+                </svg>
+                <div class="mdc-slider__focus-ring"></div>
+              </div>
+            </div>
+
+            <h3>Discrete Slider</h3>
+            <div class="mdc-slider mdc-slider--discrete" tabindex="0" role="slider"
+              aria-valuemin="0" aria-valuemax="50" aria-valuenow="10"
+              aria-label="Select Value">
+              <div class="mdc-slider__track-container">
+                <div class="mdc-slider__track"></div>
+              </div>
+              <div class="mdc-slider__thumb-container">
+                <div class="mdc-slider__pin">
+                  <span class="mdc-slider__pin-value-marker">20</span>
+                </div>
+                <svg class="mdc-slider__thumb" width="21" height="21">
+                  <circle cx="10.5" cy="10.5" r="7.875"></circle>
+                </svg>
+                <div class="mdc-slider__focus-ring"></div>
+              </div>
+            </div>
+
+            <h3>Discrete Slider with Tick Marks</h3>
+            <div class="mdc-slider mdc-slider--discrete mdc-slider--display-markers" tabindex="0" role="slider"
+              aria-valuemin="0" aria-valuemax="50" aria-valuenow="30"
+              aria-label="Select Value">
+              <div class="mdc-slider__track-container">
+                <div class="mdc-slider__track"></div>
+                <div class="mdc-slider__track-marker-container">
+                </div>
+              </div>
+              <div class="mdc-slider__thumb-container">
+                <div class="mdc-slider__pin">
+                  <span class="mdc-slider__pin-value-marker">20</span>
+                </div>
+                <svg class="mdc-slider__thumb" width="21" height="21">
+                  <circle cx="10.5" cy="10.5" r="7.875"></circle>
+                </svg>
+                <div class="mdc-slider__focus-ring"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+  (function() {
+    const determinates = document.querySelectorAll('.mdc-linear-progress');
+    for (let i = 0, determinate; determinate = determinates[i]; i++) {
+      const linearProgress = mdc.linearProgress.MDCLinearProgress.attachTo(determinate);
+      linearProgress.progress = 0.5;
+      if (determinate.dataset.buffer) {
+        linearProgress.buffer = 0.75;
+      }
+    }
+    // Tabs example.
+    new mdc.tabBar.MDCTabBar(document.querySelector('.mdc-tab-bar'));
+
+    // Checkbox
+    document.getElementById('basic-indeterminate-checkbox').indeterminate = true;
+
+    // Textfields
+    const tfRoot = document.querySelectorAll('.mdc-text-field');
+    for (let i = 0; i < tfRoot.length; i++) {
+      new mdc.textField.MDCTextField(tfRoot[i]);
+    }
+
+    // Select
+    new mdc.select.MDCSelect(document.querySelector('.mdc-select'));
+
+    // Slider
+    const MDCSlider = mdc.slider.MDCSlider;
+    const elements = document.querySelectorAll('.mdc-slider');
+    for (let i = 0; i < elements.length; i++) {
+      new MDCSlider(elements[i]);
+    }
+  })();
+</script>
+{% endblock %}

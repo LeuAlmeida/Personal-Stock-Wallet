@@ -1,0 +1,55 @@
+// Gradient Background
+.mdc-theme--secondary-bg-gradient  {
+  background: linear-gradient(125deg, $mdc-theme-secondary, darken($mdc-theme-secondary, 10%));
+}
+
+// Error Cards
+.crypto-card--error {
+  transform: translateY(20px);
+  opacity: 0;
+  animation: crypto-card--error 1s forwards 1;
+  animation-delay: 0.6s;
+  z-index: 1;
+  position: relative;
+  &:before {
+    display: block;
+    position: absolute;
+    font-size: 50vw;
+    line-height: 1;
+    color: $mdc-theme-background;
+    transform: translate3d(-50%, -80px, 0);
+    left: 50%;
+    z-index: -1;
+    bottom: 30%;
+    font-weight: 300;
+    opacity: 0;
+    animation: crypto-card--error-text 1s forwards 1;
+    animation-delay: 1.2s;
+  }
+  &.crypto-card--error-404:before {
+    content: "404";
+  }
+  &.crypto-card--error-500:before {
+    content: "500";
+  }
+}
+@keyframes crypto-card--error-text {
+  0% {
+    transform: translate3d(-50%, -80px, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+    opacity: 0.1;
+  }
+}
+@keyframes crypto-card--error {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}

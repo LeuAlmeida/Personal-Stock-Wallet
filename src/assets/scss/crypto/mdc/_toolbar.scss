@@ -1,0 +1,37 @@
+.mdc-toolbar--crypto-no-shrink {
+  flex-shrink: 0;
+  z-index: 5;
+  & + .mdc-toolbar--crypto-no-shrink {
+    z-index: 4;
+  }
+}
+.mdc-toolbar {
+  .mdc-toolbar__icon {
+    position: relative;
+    color: inherit;
+    &:focus {
+      outline: none;
+    }
+  }
+  small {
+    line-height: 24px;
+  }
+}
+
+.mdc-toolbar__logo {
+  height: $mdc-toolbar-row-height;
+}
+.mdc-toolbar__logo + .mdc-toolbar__title {
+  margin-left: 6px;
+  @include mdc-rtl {
+    margin-left: auto;
+    margin-right: 6px;
+  }
+}
+.mdc-toolbar__row {
+  min-height: 64px !important;
+}
+
+.mdc-toolbar__section--align-start {
+  padding-left: 4px !important;
+}
