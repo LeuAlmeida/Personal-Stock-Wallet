@@ -1,9 +1,9 @@
 import React, { Component, Fragment } from "react";
 import { Row } from "reactstrap";
-import IntlMessages from "../../../helpers/IntlMessages";
+// import IntlMessages from "../../../helpers/IntlMessages";
 import { Colxx, Separator } from "../../../components/common/CustomBootstrap";
 import Breadcrumb from "../../../containers/navs/Breadcrumb";
-import Pie from "../../../components/charts/Pie";
+// import Pie from "../../../components/charts/Pie";
 // import GradientCard from "../../../components/cards/GradientCard"
 import IconCard from "../../../components/cards/IconCard"
 import GradientWithRadialProgressCard from "../../../components/cards/GradientWithRadialProgressCard";
@@ -29,7 +29,6 @@ export default class Start extends Component {
         this.setState({
           data: googleData,
         })
-        // console.log('google sheet data --->', googleData)
 
       },
       simpleSheet: true
@@ -52,8 +51,11 @@ export default class Start extends Component {
                 <GradientWithRadialProgressCard icon="bank" title={
                   data.map(obj => {
                     return (
-                      <span key={obj.Ticker}>
+
+                      <span key={obj.Nome}>
                         <p>{obj.Ticker}</p>
+                        <p>{obj.Nome}</p>
+                        {/* <p>{obj.Ticker['WEG3']}</p> */}
                       </span>
                     )
                   })
@@ -66,7 +68,7 @@ export default class Start extends Component {
 
 
 
-              <Row>
+              {/* <Row>
               <Colxx xs="3" className="mb-4">
                 <IconCard className="icon-cards-row" icon="line-chart-1" title="IBOVESPA" value=
                 {
@@ -122,7 +124,7 @@ export default class Start extends Component {
                 }
                 ></IconCard>
               </Colxx>
-            </Row>
+            </Row> */}
           </Fragment>
         )
     }
