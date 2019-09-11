@@ -6,6 +6,7 @@ import Breadcrumb from "../../../containers/navs/Breadcrumb";
 import Pie from "../../../components/charts/Pie";
 // import GradientCard from "../../../components/cards/GradientCard"
 import IconCard from "../../../components/cards/IconCard"
+import GradientWithRadialProgressCard from "../../../components/cards/GradientWithRadialProgressCard";
 
 import Tabletop from 'tabletop';
 
@@ -22,7 +23,7 @@ export default class Start extends Component {
       key: '1L-ywhumD0TnbJVxhMK_zZ9hnPsSKA86xPen1XCqNuG8',
       orderby: 'Rentabilidade',
       reverse: false,
-      wanted: ['Teste2'],
+      wanted: ['Controle de Ativos'],
 
       callback: googleData => {
         this.setState({
@@ -45,29 +46,29 @@ export default class Start extends Component {
                 <Separator className="mb-5" />
               </Colxx>
             </Row>
+
             <Row>
               <Colxx xs="4" className="mb-4">
-                <IconCard className="icon-cards-row" icon="formula" title="Total" value=
-                {
+                <GradientWithRadialProgressCard icon="bank" title={
                   data.map(obj => {
                     return (
-                      <span key={obj.Consolidado}>
-                        <p className="lead text-center">{obj.Consolidado}</p>
+                      <span key={obj.Ticker}>
+                        <p>{obj.Ticker}</p>
                       </span>
                     )
                   })
                 }
-                ></IconCard>
+                detail="Ações"></GradientWithRadialProgressCard>
               </Colxx>
-
-              {/* <Colxx xs="8" className="mb-4">
-                <Pie></Pie>
-              </Colxx> */}
               </Row>
               
+
+
+
+
               <Row>
-              <Colxx xs="4" className="mb-4">
-                <IconCard className="icon-cards-row" icon="formula" title="Total" value=
+              <Colxx xs="3" className="mb-4">
+                <IconCard className="icon-cards-row" icon="line-chart-1" title="IBOVESPA" value=
                 {
                   data.map(obj => {
                     return (
@@ -80,8 +81,8 @@ export default class Start extends Component {
                 ></IconCard>
               </Colxx>
 
-              <Colxx xs="4" className="mb-4">
-                <IconCard className="icon-cards-row" icon="formula" title="Total" value=
+              <Colxx xs="3" className="mb-4">
+                <IconCard className="icon-cards-row" icon="building" title="Fundos Imobiliários" value=
                 {
                   data.map(obj => {
                     return (
@@ -94,8 +95,22 @@ export default class Start extends Component {
                 ></IconCard>
               </Colxx>
 
-              <Colxx xs="4" className="mb-4">
-                <IconCard className="icon-cards-row" icon="formula" title="Total" value=
+              <Colxx xs="3" className="mb-4">
+                <IconCard className="icon-cards-row" icon="dollar-sign-2" title="Stocks" value=
+                {
+                  data.map(obj => {
+                    return (
+                      <span key={obj.Consolidado}>
+                        <p className="lead text-center">{obj.Consolidado}</p>
+                      </span>
+                    )
+                  })
+                }
+                ></IconCard>
+              </Colxx>
+
+              <Colxx xs="3" className="mb-4">
+                <IconCard className="icon-cards-row" icon="chrysler-building" title="Reits" value=
                 {
                   data.map(obj => {
                     return (
