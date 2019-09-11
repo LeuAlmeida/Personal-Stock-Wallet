@@ -14,7 +14,7 @@ const GradientWithRadialProgressCard = ({
       <CardBody className="justify-content-between d-flex flex-row align-items-center">
         <div>
           <i
-            className={`${icon} mr-2 text-white align-text-bottom d-inline-block`}
+            className={`iconsminds-${icon} mr-2 text-white align-text-bottom d-inline-block`}
           />
           <div>
             <p className="lead text-white">{title}</p>
