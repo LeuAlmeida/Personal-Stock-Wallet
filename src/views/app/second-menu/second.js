@@ -1,8 +1,10 @@
 import React, { Component, Fragment } from "react";
 import { Row } from "reactstrap";
-import IntlMessages from "../../../helpers/IntlMessages";
+// import IntlMessages from "../../../helpers/IntlMessages";
 import { Colxx, Separator } from "../../../components/common/CustomBootstrap";
 import Breadcrumb from "../../../containers/navs/Breadcrumb";
+import GradientWithRadialProgressCard from "../../../components/cards/GradientWithRadialProgressCard";
+// import GradientCard from "../../../components/cards/GradientCard"
 
 export default class Second extends Component {
     render() {
@@ -15,8 +17,10 @@ export default class Second extends Component {
               </Colxx>
             </Row>
             <Row>
-              <Colxx xxs="12" className="mb-4">
-                <p><IntlMessages id="menu.second"/></p>
+              <Colxx xxs="4" className="mb-4">
+                <GradientWithRadialProgressCard icon="bank">
+
+                </GradientWithRadialProgressCard>
               </Colxx>
             </Row>
           </Fragment>
