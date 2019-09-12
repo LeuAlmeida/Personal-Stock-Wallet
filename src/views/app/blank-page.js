@@ -17,7 +17,6 @@ export default class BlankPage extends Component {
   componentDidMount() {
     Tabletop.init({
       key: '1L-ywhumD0TnbJVxhMK_zZ9hnPsSKA86xPen1XCqNuG8',
-      orderby: 'Rentabilidade',
       reverse: false,
       wanted: ['Extrato'],
 
@@ -56,28 +55,30 @@ export default class BlankPage extends Component {
                         })
                       }
                     </div>
-                    <table className="table table-striped">
-                      <thead>
-                        <tr>
-                          <th>Descrição</th>
-                          <th>Data</th>
-                          <th>Valor</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                      {
-                        data.map(obj => {
-                          return (
-                            <tr key={obj.Descrição}>
-                              <td>{obj.Descrição}</td>
-                              <td>{obj.Data}</td>
-                              <td>{obj.Valor}</td>
-                            </tr>
-                          )
-                        })
-                      }
-                      </tbody>
-                    </table>
+                    <div className="table-responsive">
+                      <table className="table table-hover table-striped">
+                        <thead>
+                          <tr>
+                            <th>Descrição</th>
+                            <th>Data</th>
+                            <th>Valor</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                        {
+                          data.map(obj => {
+                            return (
+                              <tr key={obj.Descrição}>
+                                <td>{obj.Descrição}</td>
+                                <td>{obj.Data}</td>
+                                <td>{obj.Valor}</td>
+                              </tr>
+                            )
+                          })
+                        }
+                        </tbody>
+                      </table>
+                    </div>
                   </div>
                 </div>
                 
