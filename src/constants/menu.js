@@ -21,7 +21,7 @@ const data = [
         id: "fii",
         icon: "iconsminds-building",
         label: "menu.fii",
-        to: "/app/gogo/fii"
+        to: "/app/gogo/fiis"
       },     
       {
         id: "stocks",
