@@ -35,6 +35,7 @@ module.exports = {
   "menu.start": "Consolidated",
   "menu.ibovespa": "IBOVESPA Stocks",
   "menu.fii": "IBOVESPA Reits",
+  "menu.fiis": "IBOVESPA Reits",
   "menu.stocks": "Stocks",
   "menu.reits": "Reits",
   "menu.rendaFixa": "Fixed Income",
