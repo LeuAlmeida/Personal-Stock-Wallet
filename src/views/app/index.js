@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import AppLayout from '../../layout/AppLayout';
 
 const Gogo = React.lazy(() =>
-  import(/* webpackChunkName: "viwes-gogo" */ './gogo')
+  import(/* webpackChunkName: "viwes-gogo" */ './gogo'),
 );
 const SecondMenu = React.lazy(() =>
   import(/* webpackChunkName: "viwes-second-menu" */ './second-menu')
