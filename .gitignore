@@ -8,8 +8,9 @@ yarn-error.log*
 # Last project
 last/
 
-# Google Spreadsheet
+# Keys and Passwords
 credentials.json
+src/views/app/second-menu/second.js
 
 # Runtime data
 pids
