@@ -35,6 +35,7 @@ module.exports = {
     "menu.start": "Consolidado",
     "menu.ibovespa": "Ações da Bolsa",
     "menu.fii": "Fundos Imobiliários",
+    "menu.fiis": "Fundos Imobiliários",
     "menu.stocks": "Stocks NYSE",
     "menu.reits": "Reits NYSE",
     "menu.rendaFixa": "Renda Fixa",
