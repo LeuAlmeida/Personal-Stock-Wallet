@@ -1,0 +1,13 @@
+.rounded .card-img-left{
+    width:140px !important;
+    height: 94px !important;
+}
+
+/* Nome do Ativo */
+.list-item-heading.mb-1.truncate{
+    width: 150px !important;
+}
+
+.w-15 {
+    width: 9% !important;
+}
