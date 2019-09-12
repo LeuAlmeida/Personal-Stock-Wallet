@@ -1,41 +1,47 @@
 const data = [
   {
+    id: "start",
+    icon: "iconsminds-wallet",
+    label: "menu.start",
+    to: "/app/gogo/start",
+  },
+  {
     id: "gogo",
     icon: "iconsminds-bank",
     label: "menu.bank",
     to: "/app/gogo",
     subs: [
-      {
-        icon: "iconsminds-wallet",
-        label: "menu.start",
-        to: "/app/gogo/start"
-      },
-      {
+        {
+        id: "ibovespa",
         icon: "iconsminds-line-chart-1",
         label: "menu.ibovespa",
         to: "/app/gogo/ibovespa"
       },
       {
+        id: "fii",
         icon: "iconsminds-building",
         label: "menu.fii",
         to: "/app/gogo/fii"
       },     
       {
+        id: "stocks",
         icon: "iconsminds-dollar-sign-2",
         label: "menu.stocks",
         to: "/app/gogo/stocks"
       },     
       {
+        id: "reits",
         icon: "iconsminds-chrysler-building",
         label: "menu.reits",
         to: "/app/gogo/reits"
       },     
       {
+        id: "rendaFixa",
         icon: "iconsminds-coins",
         label: "menu.rendaFixa",
         to: "/app/gogo/rendaFixa"
       }
-    ]
+        ]
   },
   {
     id: "secondmenu",
