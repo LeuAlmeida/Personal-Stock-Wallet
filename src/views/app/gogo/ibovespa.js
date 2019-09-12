@@ -18,7 +18,7 @@ export default class Ibovespa extends Component {
     Tabletop.init({
       key: '1L-ywhumD0TnbJVxhMK_zZ9hnPsSKA86xPen1XCqNuG8',
       orderby: 'Posição',
-      reverse: true,
+      reverse: false,
       wanted: ['Ações'],
 
       callback: googleData => {
@@ -66,15 +66,9 @@ export default class Ibovespa extends Component {
                             <p className="mb-1 text-muted text-small w-15 w-sm-100">Lucro</p>
                             <p className="mb-1 text-muted text-small w-15 w-sm-100">P/M</p>
                             <p className="mb-1 text-muted text-small w-15 w-sm-100">Rentabilidade</p>
+                            <p className="mb-1 text-muted text-small w-15 w-sm-100">Falta</p>
                             <p className="mb-1 text-muted text-small w-15 w-sm-100">Situação</p>
                           </div>
-                        <div className="custom-control custom-checkbox pl-1 align-self-center pr-4">
-                          <div className="item-check mb-0 custom-checkbox custom-control">
-                            <input type="checkbox" id="check_18" className="custom-control-input" />
-                            <label className="custom-control-label" for="check_18">
-                            </label>
-                          </div>
-                        </div>
                         </div>
               </Colxx>
             </Row>
@@ -96,21 +90,14 @@ export default class Ibovespa extends Component {
                             <p className="mb-1  text-small w-15 w-sm-100">{obj.Lucro}</p>
                             <p className="mb-1 text-muted text-small w-15 w-sm-100">{obj.PM}</p>
                             <p className="mb-1 text-muted text-small w-15 w-sm-100">{obj.Rentabilidade}</p>
+                            <p className="mb-1 text-muted text-small w-15 w-sm-100">{obj.Falta}</p>
                             <h4 className="w-15 w-sm-100">
-
                               <a href={obj.FaltaCotas >= 0 ? 'http://clear.com.br' : 'javascript:()'} target="_blank">
-
-                                <span className={`badge badge-${obj.FaltaCotas >= 0 ? 'success' : 'outline-danger'} badge-pill`}>{obj.Situação}</span>
+                                <span className={`badge badge-${obj.Situação == 'Comprar' ? 'success' : 'outline-danger'} badge-pill`}>{obj.Situação}
+                                </span>
                                 </a>
                             </h4>
                           </div>
-                        <div className="custom-control custom-checkbox pl-1 align-self-center pr-4">
-                          <div className="item-check mb-0 custom-checkbox custom-control">
-                            <input type="checkbox" id="check_18" className="custom-control-input" />
-                            <label className="custom-control-label" for="check_18">
-                            </label>
-                          </div>
-                        </div>
                         </div>
                         </div>
                       </Colxx>
