@@ -1,12 +1,9 @@
 import React, { Component, Fragment } from "react";
 import { Row } from "reactstrap";
-// import IntlMessages from "../../../helpers/IntlMessages";
 import { Colxx, Separator } from "../../../components/common/CustomBootstrap";
 import Breadcrumb from "../../../containers/navs/Breadcrumb";
-// import Pie from "../../../components/charts/Pie";
-// import GradientCard from "../../../components/cards/GradientCard"
-import IconCard from "../../../components/cards/IconCard"
 import GradientWithRadialProgressCard from "../../../components/cards/GradientWithRadialProgressCard";
+import Pie from "../../../components/charts/Pie";
 
 import Tabletop from 'tabletop';
 
@@ -23,7 +20,7 @@ export default class Start extends Component {
       key: '1L-ywhumD0TnbJVxhMK_zZ9hnPsSKA86xPen1XCqNuG8',
       orderby: 'Rentabilidade',
       reverse: false,
-      wanted: ['Controle de Ativos'],
+      wanted: ['Dados Gerais'],
 
       callback: googleData => {
         this.setState({
@@ -47,22 +44,43 @@ export default class Start extends Component {
             </Row>
 
             <Row>
-              <Colxx xs="4" className="mb-4">
-                <GradientWithRadialProgressCard icon="bank" title={
+            <Colxx xs="4" className="mb-4">
+                <GradientWithRadialProgressCard icon="bank" progressText="100%" percent="100" title=
+                {
                   data.map(obj => {
                     return (
-
-                      <span key={obj.Nome}>
-                        <p>{obj.Ticker}</p>
-                        <p>{obj.Nome}</p>
-                        {/* <p>{obj.Ticker['WEG3']}</p> */}
+                      <span key={obj.id}>
+                        <p className="lead text-white">{obj.Consolidado}</p>
                       </span>
                     )
                   })
                 }
-                detail="Ações"></GradientWithRadialProgressCard>
+                detail="Valor total da carteira"></GradientWithRadialProgressCard>
               </Colxx>
+              {
+                  data.map(obj => {
+                    return (
+                      <Colxx xs="4" className="mb-4" key={obj.id}>
+                        <GradientWithRadialProgressCard 
+                        icon={obj.Icone}
+                        progressText={obj.ExibCarteira}
+                        percent={obj.PorcentCarteira}
+                        title={obj.TOTAL}
+                        detail={obj.SITUAÇÃO}
+                        >
+                        </GradientWithRadialProgressCard>
+                      </Colxx>
+                    )
+                  })
+                }
               </Row>
+              <Row>
+                <Colxx xxs="6">
+
+                </Colxx>
+              </Row>
+              
+              
               
 
 
