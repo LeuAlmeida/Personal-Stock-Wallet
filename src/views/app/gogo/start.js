@@ -3,7 +3,7 @@ import { Row } from "reactstrap";
 import { Colxx, Separator } from "../../../components/common/CustomBootstrap";
 import Breadcrumb from "../../../containers/navs/Breadcrumb";
 import GradientWithRadialProgressCard from "../../../components/cards/GradientWithRadialProgressCard";
-import Pie from "../../../components/charts/Pie";
+
 
 import Tabletop from 'tabletop';
 
@@ -42,7 +42,6 @@ export default class Start extends Component {
                 <Separator className="mb-5" />
               </Colxx>
             </Row>
-
             <Row>
             <Colxx xs="4" className="mb-4">
                 <GradientWithRadialProgressCard icon="bank" progressText="100%" percent="100" title=
