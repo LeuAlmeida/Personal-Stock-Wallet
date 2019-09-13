@@ -305,7 +305,7 @@ class TopNav extends Component {
               </DropdownToggle>
               <DropdownMenu className="mt-3" right>
                 <DropdownItem>Minha conta</DropdownItem>
-                <DropdownItem>Features</DropdownItem>
+                <DropdownItem>Configurações</DropdownItem>
                 <DropdownItem>Histórico</DropdownItem>
                 <DropdownItem>Fale Conosco</DropdownItem>
                 <DropdownItem divider />
