@@ -3,7 +3,7 @@ import { Row } from "reactstrap";
 import { Colxx, Separator } from "../../../components/common/CustomBootstrap";
 import Breadcrumb from "../../../containers/navs/Breadcrumb";
 import GradientWithRadialProgressCard from "../../../components/cards/GradientWithRadialProgressCard";
-
+import IconCard from "../../../components/cards/IconCard";
 
 import Tabletop from 'tabletop';
 
@@ -20,7 +20,7 @@ export default class Start extends Component {
       key: '1L-ywhumD0TnbJVxhMK_zZ9hnPsSKA86xPen1XCqNuG8',
       orderby: 'Rentabilidade',
       reverse: false,
-      wanted: ['Dados Gerais'],
+      wanted: ['Consolidado'],
 
       callback: googleData => {
         this.setState({
@@ -74,19 +74,21 @@ export default class Start extends Component {
                 }
               </Row>
               <Row>
-                <Colxx xxs="6">
-
+                <Colxx xxs="12">
+                  <Separator className="mb-5" />
+                </Colxx>
+              </Row>
+              <Row>
+                <Colxx xxs="6" className="mb-4 text-center">
+                  <h2>Índice Bovespa</h2>
+                </Colxx>
+                <Colxx xxs="6" className="mb-4 text-center">
+                  <h2>Cotação do Dólar</h2>
                 </Colxx>
               </Row>
               
-              
-              
-
-
-
-
-              {/* <Row>
-              <Colxx xs="3" className="mb-4">
+              <Row>
+              <Colxx xs="6" className="mb-4">
                 <IconCard className="icon-cards-row" icon="line-chart-1" title="IBOVESPA" value=
                 {
                   data.map(obj => {
@@ -99,49 +101,7 @@ export default class Start extends Component {
                 }
                 ></IconCard>
               </Colxx>
-
-              <Colxx xs="3" className="mb-4">
-                <IconCard className="icon-cards-row" icon="building" title="Fundos Imobiliários" value=
-                {
-                  data.map(obj => {
-                    return (
-                      <span key={obj.Consolidado}>
-                        <p className="lead text-center">{obj.Consolidado}</p>
-                      </span>
-                    )
-                  })
-                }
-                ></IconCard>
-              </Colxx>
-
-              <Colxx xs="3" className="mb-4">
-                <IconCard className="icon-cards-row" icon="dollar-sign-2" title="Stocks" value=
-                {
-                  data.map(obj => {
-                    return (
-                      <span key={obj.Consolidado}>
-                        <p className="lead text-center">{obj.Consolidado}</p>
-                      </span>
-                    )
-                  })
-                }
-                ></IconCard>
-              </Colxx>
-
-              <Colxx xs="3" className="mb-4">
-                <IconCard className="icon-cards-row" icon="chrysler-building" title="Reits" value=
-                {
-                  data.map(obj => {
-                    return (
-                      <span key={obj.Consolidado}>
-                        <p className="lead text-center">{obj.Consolidado}</p>
-                      </span>
-                    )
-                  })
-                }
-                ></IconCard>
-              </Colxx>
-            </Row> */}
+            </Row>
           </Fragment>
         )
     }
