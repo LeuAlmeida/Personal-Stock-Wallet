@@ -1,8 +1,10 @@
 import React, { Component, Fragment } from "react";
 import { Row } from "reactstrap";
+
 import { Colxx, Separator } from "../../../components/common/CustomBootstrap";
 import Breadcrumb from "../../../containers/navs/Breadcrumb";
 import '../../../assets/css/common/style.css';
+import StocksTitle from '../../../components/common/stocksTitle'
 
 import Tabletop from 'tabletop';
 
@@ -55,41 +57,7 @@ export default class Stocks extends Component {
 
             <Row>
               <Colxx xxs="12">
-                          
-                          <div className="pl-2 d-flex flex-grow-1 min-width-zero">
-                          <div className="card-body align-self-center d-flex flex-column flex-lg-row justify-content-between min-width-zero align-items-lg-center">
-                          <p className="list-item-heading mb-1 truncate">
-                            Marca
-                          </p>
-                          <p className="list-item-heading mb-1 truncate">
-                            Empresa
-                          </p>
-                          <p className="list-item-heading mb-1 truncate">
-                            Ticker
-                          </p>
-                          <p className="mb-1 text-muted text-small w-15 w-sm-100">
-                            Preço
-                          </p>
-                          <p className="mb-1 text-muted text-small w-15 w-sm-100">
-                            Posição
-                          </p>
-                          <p className="mb-1 text-muted text-small w-15 w-sm-100">
-                            Lucro
-                          </p>
-                          <p className="mb-1 text-muted text-small w-15 w-sm-100">
-                            P/M
-                          </p>
-                          <p className="mb-1 text-muted text-small w-15 w-sm-100">
-                            Rentab.
-                          </p>
-                          <p className="mb-1 text-muted text-small w-15 w-sm-100">
-                            Falta
-                          </p>
-                          <p className="mb-1 text-muted text-small w-15 w-sm-100">
-                            Situação
-                          </p>
-                          </div>
-                        </div>
+                <StocksTitle />
               </Colxx>
             </Row>
 
@@ -98,7 +66,6 @@ export default class Stocks extends Component {
                   data.map(obj => {
                     return (
                       <Colxx xs="12" className="mb-4" key={obj.id}>
-
                         <div className="d-flex flex-row active card">
                           <img alt={obj.Nome} src={obj.Logo} className="list-thumbnail responsive border-0 card-img-left" />
                         <div className={'pl-2 d-flex flex-grow-1 min-width-zero'}>
