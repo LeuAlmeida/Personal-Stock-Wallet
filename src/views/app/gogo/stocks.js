@@ -18,7 +18,7 @@ export default class Stocks extends Component {
     Tabletop.init({
       key: '1L-ywhumD0TnbJVxhMK_zZ9hnPsSKA86xPen1XCqNuG8',
       orderby: 'Posição',
-      reverse: true,
+      reverse: false,
       wanted: ['Stocks'],
 
       callback: googleData => {
