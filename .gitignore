@@ -8,10 +8,6 @@ yarn-error.log*
 # Last project
 last/
 
-# Keys and Passwords
-credentials.json
-src/views/app/second-menu/second.js
-
 # Runtime data
 pids
 *.pid
@@ -66,6 +62,11 @@ typings/
 
 # next.js build output
 .next
+
+# Keys and Passwords
+credentials.json
+src/views/app/second-menu/second.js
+
 
 build/
 
