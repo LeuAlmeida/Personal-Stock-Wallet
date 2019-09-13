@@ -1,7 +1,7 @@
 const data = [
   {
     id: "start",
-    icon: "iconsminds-wallet",
+    icon: "iconsminds-dashboard",
     label: "menu.start",
     to: "/app/gogo/start",
   },
