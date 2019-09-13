@@ -265,7 +265,7 @@ class TopNav extends Component {
             <a
               className="btn btn-outline-primary btn-sm ml-2"
               target="_top"
-              href="https://gogo-react-docs.coloredstrategies.com/docs/gettingstarted/introduction"
+              href="https://gogo-react.coloredstrategies.com/app/dashboards/default"
             >
               <IntlMessages id="user.buy" />
             </a>
