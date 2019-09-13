@@ -85,7 +85,7 @@ export default class Ibovespa extends Component {
                             <p className="mb-1 text-muted text-small w-15 w-sm-100">{obj.Falta}</p>
                             <h4 className="w-15 w-sm-100">
                               <a href={obj.FaltaCotas >= 0 ? 'http://clear.com.br' : '#'} target={obj.FaltaCotas >= 0 ? '_blank' : '_self'}>
-                                <span className={`badge badge-${obj.Situação == 'Comprar' ? 'success' : 'outline-danger'} badge-pill`}>{obj.Situação}
+                                <span className={`badge badge-${obj.Situação === 'Comprar' ? 'success' : 'outline-danger'} badge-pill`}>{obj.Situação}
                                 </span>
                               </a>
                             </h4>
