@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from "react";
 import { Row } from "reactstrap";
 import { Colxx, Separator } from "../../../components/common/CustomBootstrap";
+
 import Breadcrumb from "../../../containers/navs/Breadcrumb";
 import GradientWithRadialProgressCard from "../../../components/cards/GradientWithRadialProgressCard";
 import IconCard from "../../../components/cards/IconCard";
@@ -86,22 +87,18 @@ export default class Start extends Component {
                   <h2>Cotação do Dólar</h2>
                 </Colxx>
               </Row>
-              
               <Row>
-              <Colxx xs="6" className="mb-4">
-                <IconCard className="icon-cards-row" icon="line-chart-1" title="IBOVESPA" value=
                 {
-                  data.map(obj => {
+                  data.map(line2 => {
                     return (
-                      <span key={obj.Consolidado}>
-                        <p className="lead text-center">{obj.Consolidado}</p>
-                      </span>
+                         <Colxx xs="6" className="mb-4" key={line2.Moeda}>
+                          <IconCard className="icon-cards-row"icon={line2.iconMoeda} title={line2.Moeda} value={line2.MoedaPreço} >
+                            </IconCard>
+                          </Colxx>
                     )
                   })
                 }
-                ></IconCard>
-              </Colxx>
-            </Row>
+              </Row>
           </Fragment>
         )
     }
