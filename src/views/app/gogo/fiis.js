@@ -47,6 +47,13 @@ export default class Fiis extends Component {
                     </span>
                   )
                 })}
+                {/* {data.map(obj => {
+                  return (
+                    <span key={obj.id}>
+                      <h1>{obj.Total}</h1>
+                    </span>
+                  )
+                })} */}
               </Colxx>
               <Colxx xxs="12">
               <Separator className="mb-5" />
@@ -58,16 +65,36 @@ export default class Fiis extends Component {
                           
                           <div className="pl-2 d-flex flex-grow-1 min-width-zero">
                           <div className="card-body align-self-center d-flex flex-column flex-lg-row justify-content-between min-width-zero align-items-lg-center">
-                          <p className="list-item-heading mb-1 truncate">Marca</p>
-                            <p className="list-item-heading mb-1 truncate">Empresa</p>
-                            <p className="mb-1 text-small w-15 w-sm-100">Ticker</p>
-                            <p className="mb-1 text-muted text-small w-15 w-sm-100">Cotação</p>
-                            <p className="mb-1 text-small w-15 w-sm-100">Posição</p>
-                            <p className="mb-1 text-muted text-small w-15 w-sm-100">Lucro</p>
-                            <p className="mb-1 text-muted text-small w-15 w-sm-100">P/M</p>
-                            <p className="mb-1 text-muted text-small w-15 w-sm-100">Rentabilidade</p>
-                            <p className="mb-1 text-muted text-small w-15 w-sm-100">Falta</p>
-                            <p className="mb-1 text-muted text-small w-15 w-sm-100">Situação</p>
+                          <p className="list-item-heading mb-1 truncate">
+                            Marca
+                          </p>
+                          <p className="list-item-heading mb-1 truncate">
+                            Empresa
+                          </p>
+                          <p className="list-item-heading mb-1 truncate">
+                            Ticker
+                          </p>
+                          <p className="mb-1 text-muted text-small w-15 w-sm-100">
+                            Preço
+                          </p>
+                          <p className="mb-1 text-muted text-small w-15 w-sm-100">
+                            Posição
+                          </p>
+                          <p className="mb-1 text-muted text-small w-15 w-sm-100">
+                            Lucro
+                          </p>
+                          <p className="mb-1 text-muted text-small w-15 w-sm-100">
+                            P/M
+                          </p>
+                          <p className="mb-1 text-muted text-small w-15 w-sm-100">
+                            Rentab.
+                          </p>
+                          <p className="mb-1 text-muted text-small w-15 w-sm-100">
+                            Falta
+                          </p>
+                          <p className="mb-1 text-muted text-small w-15 w-sm-100">
+                            Situação
+                          </p>
                           </div>
                         </div>
               </Colxx>
@@ -92,7 +119,7 @@ export default class Fiis extends Component {
                             <p className="mb-1 text-muted text-small w-15 w-sm-100">{obj.Rentabilidade}</p>
                             <p className="mb-1 text-muted text-small w-15 w-sm-100">{obj.Falta}</p>
                             <h4 className="w-15 w-sm-100">
-                              <a href={obj.FaltaCotas >= 0 ? 'http://clear.com.br' : 'javascript:()'} target="_blank">
+                              <a href={obj.FaltaCotas >= 0 ? 'http://xpinvestimentos.com.br' : '#'} target={obj.FaltaCotas >= 0 ? '_blank' : '_self'}>
                                 <span className={`badge badge-${obj.Situação == 'Comprar' ? 'success' : 'outline-danger'} badge-pill`}>{obj.Situação}
                                 </span>
                                 </a>
