@@ -65,7 +65,6 @@ typings/
 
 # Keys and Passwords
 credentials.json
-src/views/app/second-menu/second.js
 
 
 build/
