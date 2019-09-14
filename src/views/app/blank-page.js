@@ -56,7 +56,7 @@ export default class BlankPage extends Component {
                       }
                     </div>
                     <div className="table-responsive">
-                      <table className="table table-hover table-striped">
+                      <table className="table">
                         <thead>
                           <tr>
                             <th>Descrição</th>
@@ -68,7 +68,8 @@ export default class BlankPage extends Component {
                         {
                           data.map(obj => {
                             return (
-                              <tr key={obj.Descrição}>
+                              // <tr className={obj.Valor >= 0 && obj.Descrição !== 'Saldo' ? 'bg-success' : ''} key={obj.Descrição}>
+                              <tr className={obj.Valor >= 0 ? 'bg-success' : 'bg-danger'} key={obj.Descrição}>
                                 <td>{obj.Descrição}</td>
                                 <td>{obj.Data}</td>
                                 <td>{obj.Valor}</td>
