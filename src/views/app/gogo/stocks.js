@@ -45,7 +45,7 @@ export default class Stocks extends Component {
               <Colxx xxs="2">                
               {data.map(obj => {
                   return (
-                    <span key={obj.Total} className={obj.Arrow === 'arrow-up-2' ? 'text-success' : 'text-warning'}>
+                    <span key={obj.Total} className={obj.Arrow === 'arrow-up-2' ? 'text-success' : 'text-danger'}>
                       <h1>
                         {obj.Total}
                         <Icon icon={obj.Arrow} />
