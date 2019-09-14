@@ -25,7 +25,7 @@ const data = [
       },     
       {
         id: "stocks",
-        icon: "iconsminds-dollar-sign-2",
+        icon: "iconsminds-dollar",
         label: "menu.stocks",
         to: "/app/gogo/stocks"
       },     
