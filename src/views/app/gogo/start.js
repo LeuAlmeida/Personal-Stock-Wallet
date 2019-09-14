@@ -81,10 +81,10 @@ export default class Start extends Component {
               </Row>
               <Row>
                 <Colxx xxs="6" className="mb-4 text-center">
-                  <h2>Índice Bovespa</h2>
+                  <h2>Cotação do Dólar</h2>
                 </Colxx>
                 <Colxx xxs="6" className="mb-4 text-center">
-                  <h2>Cotação do Dólar</h2>
+                  <h2>Índice Bovespa</h2>
                 </Colxx>
               </Row>
               <Row>
