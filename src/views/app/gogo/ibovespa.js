@@ -5,6 +5,7 @@ import { Colxx, Separator } from "../../../components/common/CustomBootstrap";
 import Breadcrumb from "../../../containers/navs/Breadcrumb";
 import '../../../assets/css/common/style.css';
 import StocksTitle from '../../../components/common/stocksTitle'
+import Icon from '../../../components/common/icon'
 
 import Tabletop from 'tabletop';
 
@@ -48,8 +49,11 @@ export default class Ibovespa extends Component {
               <Colxx xxs="2">                
                 {data.map(obj => {
                   return (
-                    <span key={obj.Total}>
-                      <h1>{obj.Total}</h1>
+                    <span key={obj.Total} className={obj.Arrow === 'arrow-up-2' ? 'text-success' : 'text-warning'}>
+                      <h1>
+                        {obj.Total}
+                        <Icon icon={obj.Arrow} />
+                      </h1>
                     </span>
                   )
                 })}
