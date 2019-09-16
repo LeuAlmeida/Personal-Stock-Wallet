@@ -1,5 +1,7 @@
 import React, { Component, Fragment } from "react";
 import { Row } from "reactstrap";
+
+import '../../assets/css/common/style.css';
 import IntlMessages from "../../helpers/IntlMessages";
 import { Colxx, Separator } from "../../components/common/CustomBootstrap";
 import Breadcrumb from "../../containers/navs/Breadcrumb";
@@ -57,7 +59,7 @@ export default class BlankPage extends Component {
                     </div>
                     <div className="table-responsive">
                       <table className="table">
-                        <thead>
+                        <thead className="bg-dark">
                           <tr>
                             <th>Descrição</th>
                             <th>Data</th>
@@ -68,11 +70,12 @@ export default class BlankPage extends Component {
                         {
                           data.map(obj => {
                             return (
-                              // <tr className={obj.Valor >= 0 && obj.Descrição !== 'Saldo' ? 'bg-success' : ''} key={obj.Descrição}>
-                              <tr className={obj.Valor >= 0 ? 'bg-success' : 'bg-danger'} key={obj.Descrição}>
+                              <tr className=
+                              {obj.Descrição.search('Investimento') < 0 ? (obj.Descrição !== 'Saldo' ? (obj.Valor >= 0 ? 'bg-success' : 'bg-danger') : 'bg-info') : 'bg-warning'}
+                               key={obj.Descrição}>    
                                 <td>{obj.Descrição}</td>
                                 <td>{obj.Data}</td>
-                                <td>{obj.Valor}</td>
+                                <td>R$ {obj.Valor}</td>
                               </tr>
                             )
                           })
@@ -85,53 +88,6 @@ export default class BlankPage extends Component {
                 
               </Colxx>
             </Row>
-
-
-            {/* <Row>
-              <Colxx xxs="12" className="mb-4">
-                <div className="card">
-                  <div className="card-body">
-                    <div className="card-title"></div>
-                    <div className="ReactTable react-table-fixed-height">
-                      <div className="rt-table" role="grid">
-                        <div className="rt-thead -header">
-                          <div className="rt-tr" role="row">
-                            <div className="rt-th rt-resizable-header -cursor-pointer" role="columnheader" tabindex="-1">
-                              <div className="rt-resizable-header-content">Descrição</div>
-                              <div className="rt-resizer"></div>
-                            </div>
-                            <div className="rt-th rt-resizable-header -cursor-pointer" role="columnheader" tabindex="-1">
-                              <div className="rt-resizable-header-content">Data</div>
-                              <div className="rt-resizer"></div>
-                            </div>
-                            <div className="rt-th rt-resizable-header -cursor-pointer" role="columnheader" tabindex="-1">
-                              <div className="rt-resizable-header-content">Valor</div>
-                              <div className="rt-resizer"></div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="rt-tbody">
-                          <div className="rt-tr-group" role="rowgroup">
-                          {
-                            data.map(obj => {
-                              return (
-                                <div className="rt-tr -odd" role="row" key={obj.Descrição}>
-                                  <div className="rt-td" role="gridcell"><p className="list-item-heading">{obj.Descrição}</p></div>
-                                  <div className="rt-td" role="gridcell"><p className="text-muted">{obj.Data}</p></div>
-                                  <div className="rt-td" role="gridcell"><p className="text-muted">{obj.Valor}</p></div>
-                                </div>
-                              )
-                            })
-                          }
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
-              </Colxx>
-            </Row> */}
           </Fragment>
         )
     }
