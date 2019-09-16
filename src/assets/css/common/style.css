@@ -11,3 +11,44 @@
 .w-15 {
     width: 9% !important;
 }
+
+.table th,
+.table td{
+    border-top: 1px solid #dee2e61a !important;
+    border-color: #dee2e61a !important;
+}
+
+.bg-info {
+    background-color: #17a2b8a1 !important;
+}
+
+.bg-success {
+    background-color: #28a745b5 !important;
+}
+
+.bg-danger {
+    background-color: #dc3545bd !important;
+}
+
+.bg-warning {
+    background-color: #ffc107c9 !important;
+}
+
+thead {
+    color: #ececec !important;
+    background: #343a40 !important;
+    font-size: 16px !important;
+    text-align: center !important;
+    text-transform: uppercase !important;
+}
+
+tbody {
+    text-align: center !important;
+}
+
+tr.bg-info:last-child {
+    font-weight: bold;
+    text-transform: uppercase;
+    background:#065865 !important;
+    color:#fff;
+}
