@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from "react";
 import { Row } from "reactstrap";
 
+import CadastrarAtivo from "../../../components/common/cadastrarAtivo";
 import { Colxx, Separator } from "../../../components/common/CustomBootstrap";
 import Breadcrumb from "../../../containers/navs/Breadcrumb";
 import '../../../assets/css/common/style.css';
@@ -53,13 +54,6 @@ export default class Fiis extends Component {
                     </span>
                   )
                 })}
-                {/* {data.map(obj => {
-                  return (
-                    <span key={obj.id}>
-                      <h1>{obj.Total}</h1>
-                    </span>
-                  )
-                })} */}
               </Colxx>
               <Colxx xxs="12">
               <Separator className="mb-5" />
@@ -103,6 +97,14 @@ export default class Fiis extends Component {
                     )
                   })
                 }
+              </Row>
+              <Row>
+                <Colxx xs="12" className="mb-4 mt-4 text-center">
+                  <h2>Cadastrar novo ativo <span className="badge badge-info">BETA</span></h2>
+                </Colxx>
+                <Colxx xs="12" className="mb-4">
+                  <CadastrarAtivo />
+                </Colxx>
               </Row>
           </Fragment>
         )
