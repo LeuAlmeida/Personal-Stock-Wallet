@@ -6,6 +6,7 @@ import Breadcrumb from "../../../containers/navs/Breadcrumb";
 import '../../../assets/css/common/style.css';
 import StocksTitle from '../../../components/common/stocksTitle'
 import Icon from '../../../components/common/icon'
+import CadastrarAtivo from "../../../components/common/cadastrarAtivo";
 
 import Tabletop from 'tabletop';
 
@@ -59,7 +60,7 @@ export default class Ibovespa extends Component {
                 })}
               </Colxx>
               <Colxx xxs="12">
-              <Separator className="mb-5" />
+                <Separator className="mb-5" />
               </Colxx>
             </Row>
 
@@ -100,6 +101,15 @@ export default class Ibovespa extends Component {
                     )
                   })
                 }
+              </Row>
+
+              <Row>
+                <Colxx xs="12" className="mb-4 mt-4 text-center">
+                  <h2>Cadastrar novo ativo <span className="badge badge-info">BETA</span></h2>
+                </Colxx>
+                <Colxx xs="12" className="mb-4">
+                  <CadastrarAtivo />
+                </Colxx>
               </Row>
 
               
