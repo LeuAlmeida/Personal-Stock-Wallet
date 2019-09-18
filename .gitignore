@@ -66,6 +66,8 @@ typings/
 # Keys and Passwords
 credentials.json
 
+# Tests
+spreadsheet-test/
 
 build/
 
