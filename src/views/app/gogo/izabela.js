@@ -10,7 +10,7 @@ import CadastrarAtivo from "../../../components/common/cadastrarAtivo";
 
 import Tabletop from 'tabletop';
 
-export default class RendaFixa extends Component {
+export default class Izabela extends Component {
   constructor() {
     super()
     this.state = {
