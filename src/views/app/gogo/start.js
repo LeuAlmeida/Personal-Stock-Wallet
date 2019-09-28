@@ -45,7 +45,7 @@ export default class Start extends Component {
             </Row>
             <Row>
             <Colxx xs="4" className="mb-4">
-                {/* <GradientWithRadialProgressCard icon="bank" progressText="100%" percent="100" title=
+                <GradientWithRadialProgressCard icon="bank" progressText="100%" percent="100" title=
                 {
                   data.map(obj => {
                     return (
@@ -55,9 +55,9 @@ export default class Start extends Component {
                     )
                   })
                 }
-                detail="Valor total da carteira"></GradientWithRadialProgressCard> */}
+                detail="Valor total da carteira"></GradientWithRadialProgressCard>
               </Colxx>
-              {/* {
+              {
                   data.map(obj => {
                     return (
                       <Colxx xs="4" className="mb-4" key={obj.id}>
@@ -72,7 +72,7 @@ export default class Start extends Component {
                       </Colxx>
                     )
                   })
-                } */}
+                }
               </Row>
               <Row>
                 <Colxx xxs="12">

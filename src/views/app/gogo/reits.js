@@ -10,7 +10,7 @@ import CadastrarAtivo from "../../../components/common/cadastrarAtivo";
 
 import Tabletop from 'tabletop';
 
-export default class Centenario extends Component {
+export default class Reits extends Component {
   constructor() {
     super()
     this.state = {
@@ -23,7 +23,7 @@ export default class Centenario extends Component {
       key: '1L-ywhumD0TnbJVxhMK_zZ9hnPsSKA86xPen1XCqNuG8',
       orderby: 'Posição',
       reverse: false,
-      wanted: ['Stocks'],
+      wanted: ['Reits'],
 
       callback: googleData => {
         this.setState({

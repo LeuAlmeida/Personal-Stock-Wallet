@@ -4,29 +4,21 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 const Start = React.lazy(() =>
   import(/* webpackChunkName: "start" */ './start')
 );
-const Umesp = React.lazy(() =>
-  import(/* webpackChunkName: "start" */ './umesp')
+const Ibovespa = React.lazy(() =>
+  import(/* webpackChunkName: "start" */ './ibovespa')
 );
-const Unimep = React.lazy(() =>
-  import(/* webpackChunkName: "start" */ './unimep')
+const Fiis = React.lazy(() =>
+  import(/* webpackChunkName: "start" */ './fiis')
 );
-const Centenario = React.lazy(() =>
-  import(/* webpackChunkName: "start" */ './centenario')
+const Stocks = React.lazy(() =>
+  import(/* webpackChunkName: "start" */ './stocks')
 );
-const Granbery = React.lazy(() =>
-  import(/* webpackChunkName: "start" */ './granbery')
+const Reits = React.lazy(() =>
+  import(/* webpackChunkName: "start" */ './reits')
 );
-const Ipa = React.lazy(() =>
-  import(/* webpackChunkName: "start" */ './ipa')
+const RendaFixa = React.lazy(() =>
+  import(/* webpackChunkName: "start" */ './rendaFixa')
 );
-const Izabela = React.lazy(() =>
-  import(/* webpackChunkName: "start" */ './izabela')
-);
-const ADistancia = React.lazy(() =>
-  import(/* webpackChunkName: "start" */ './ensinoADistancia')
-);
-
-
 const Gogo = ({ match }) => (
   <Suspense fallback={<div className="loading" />}>
     <Switch>
@@ -37,41 +29,30 @@ const Gogo = ({ match }) => (
         <Start {...props} />}
       />
       <Route
-        path={`${match.url}/umesp`} 
+        path={`${match.url}/ibovespa`} 
         render={props => 
-        <Umesp {...props} />}
+        <Ibovespa {...props} />}
       />
       <Route
-        path={`${match.url}/unimep`} 
+        path={`${match.url}/fiis`} 
         render={props => 
-        <Unimep {...props} />}
+        <Fiis {...props} />}
       />
       <Route
-        path={`${match.url}/centenario`} 
+        path={`${match.url}/stocks`} 
         render={props => 
-        <Centenario {...props} />}
+        <Stocks {...props} />}
       />
       <Route
-        path={`${match.url}/granbery`} 
+        path={`${match.url}/reits`} 
         render={props => 
-        <Granbery {...props} />}
+        <Reits {...props} />}
       />
       <Route
-        path={`${match.url}/ipa`} 
+        path={`${match.url}/rendaFixa`} 
         render={props => 
-        <Ipa {...props} />}
+        <RendaFixa {...props} />}
       />
-      <Route
-        path={`${match.url}/izabela`} 
-        render={props => 
-        <Izabela {...props} />}
-      />
-      <Route
-        path={`${match.url}/ensinoADistancia`} 
-        render={props => 
-        <ADistancia {...props} />}
-      />
-      
       <Redirect to="/error" />
     </Switch>
   </Suspense>

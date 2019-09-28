@@ -10,7 +10,7 @@ import CadastrarAtivo from "../../../components/common/cadastrarAtivo";
 
 import Tabletop from 'tabletop';
 
-export default class Ipa extends Component {
+export default class Ibovespa extends Component {
   constructor() {
     super()
     this.state = {
@@ -45,7 +45,7 @@ export default class Ipa extends Component {
             <Fragment>
             <Row>
               <Colxx xxs="10">
-                <Breadcrumb heading="menu.rendaFixa" match={this.props.match} />
+                <Breadcrumb heading="menu.ibovespa" match={this.props.match} />
               </Colxx>
               <Colxx xxs="2">                
                 {data.map(obj => {
